@@ -940,87 +940,252 @@ CREATED → PLANNING → CONFIRMED → GENERATING → REVIEWING
 
 ---
 
-## 创意工坊 Studio 详细介绍
+## 画板 Canvas 与画板Agent 详细介绍
 
 > 详细文档请参阅 [STUDIO.md](./STUDIO.md)
 
-### 核心概念
+### 核心原则
 
-#### Session（创作会话）
+**用户主导，AI辅助**
+- 用户是创作者，Agent只是辅助工具
+- 所有操作必须等待用户明确指令
+- 不主动修改任何内容
 
-一次完整的创作过程，包含：
+---
 
-- **Brief** - AI 解析后的结构化需求
-- **ContentPlan** - 内容生成方案
-- **ContentItem[]** - 生成的内容项
-- **Version[]** - 版本历史
-- **Message[]** - 对话消息历史
+### 画板 Canvas
 
-#### Brief（需求解析）
+画板是创意工坊的**可视化编辑画布**，提供内容元素的创建、编辑和组织能力。
+
+#### 核心组件
+
+| 文件 | 功能 |
+|------|------|
+| `canvas_core.py` | 画板核心：状态管理、操作引擎、撤销/重做 |
+| `canvas_agent.py` | 画板Agent：ReAct循环、模式切换、技能调度 |
+| `canvas_storage.py` | 画板持久化存储 |
+| `canvas_sync.py` | 画布同步管理 |
+
+#### 元素类型 (ElementType)
+
+| 类型 | 说明 |
+|------|------|
+| `TEXT` | 文本元素 |
+| `IMAGE` | 图片元素 |
+| `VIDEO` | 视频元素 |
+| `AUDIO` | 音频元素 |
+| `SHAPE` | 形状元素 |
+| `GROUP` | 组合元素 |
+| `DRAWING` | 绘画元素 |
+
+#### 操作类型 (OperationType)
+
+| 操作 | 说明 |
+|------|------|
+| `CREATE` | 创建元素 |
+| `DELETE` | 删除元素 |
+| `UPDATE` | 更新元素属性 |
+| `MOVE` | 移动元素 |
+| `RESIZE` | 缩放元素 |
+| `ROTATE` | 旋转元素 |
+| `STYLE` | 样式修改 |
+| `GROUP` / `UNGROUP` | 组合/取消组合 |
+| `ALIGN` | 对齐元素 |
+| `TEXT_EDIT` | 文本编辑 |
+| `LASSO_SELECT` | 自由框选 |
+| `ELEMENT_SELECT` | 元素选择 |
+
+#### 核心数据结构
 
 ```python
 @dataclass
-class Brief:
-    goal: ContentGoal           # 种草/测评/教程/生活分享/产品展示
-    style: str                # 活泼/专业/治愈等
-    keywords: List[str]        # 关键词/卖点
-    must_include: List[str]    # 必须包含的元素
-    image_style: str          # 配图风格（摄影实拍/插画/3D）
-    need_text: bool          # 是否需要文案
-    need_images: bool         # 是否需要配图
-    need_video: bool          # 是否需要视频
-    need_voiceover: bool     # 是否需要配音
-    target_audience: str     # 目标受众
+class CanvasElement:
+    id: str                           # 唯一标识符
+    type: str                         # 元素类型
+    position: Dict[str, float]        # 位置 {x, y}
+    size: Dict[str, float]           # 尺寸 {width, height}
+    z_index: int                      # 层级
+    locked: bool                      # 是否锁定
+    visible: bool                     # 是否可见
+    metadata: ElementMetadata         # 类型特定元数据
+    styles: ElementStyles             # 样式
+    created_by: str                   # 创建者 (user/agent)
+
+@dataclass
+class CanvasSnapshot:
+    canvas_id: str
+    name: str
+    width: float = 1920
+    height: float = 1080
+    background_color: str = "#ffffff"
+    elements: List[CanvasElement]    # 元素列表
+    operation_history: List[CanvasOperation]  # 操作历史
+    selection: Optional[SelectionRegion]  # 当前选中区域
 ```
 
-### 技能系统（Skills）
+---
 
-| 技能 | 调用模型 | 功能 |
-|------|---------|------|
-| `TextSkill` | LLM | 生成小红书风格文案 |
-| `ImageSkill` | Image Generation | 生成配图 |
-| `VideoSkill` | Video Generation | 生成视频 |
-| `AudioSkill` | TTS | 生成语音配音 |
-| `AnalyticSkill` | Vision | 分析素材图片 |
+### 画板Agent (CanvasAgent)
 
-### Canvas 画布功能
+画板Agent是基于**Mini-Agent的ReAct循环模式**的AI辅助创作Agent。
 
-**功能**：
-- 拖拽文件（图片/视频）到画布
-- 框选内容元素
-- 元素对齐和分布
-- 画布快照和回溯
-- AI 辅助编辑建议
+#### 核心特性
 
-**操作类型**：
-- `ADD_ELEMENT` - 添加元素
-- `MOVE_ELEMENT` - 移动元素
-- `RESIZE_ELEMENT` - 调整大小
-- `DELETE_ELEMENT` - 删除元素
-- `STYLE_CHANGE` - 样式修改
-- `UNDO` / `REDO` - 撤销/重做
+| 特性 | 说明 |
+|------|------|
+| **用户主导** | 所有操作等待用户明确指令 |
+| **ReAct循环** | Think → Act → Observe 循环执行 |
+| **三模式架构** | DAILY（日常）/ PLANNING（规划）/ WORKING（工作） |
+| **技能系统** | 渐进式披露的技能机制 |
+
+#### Agent模式
+
+| 模式 | 说明 | 可用工具 |
+|------|------|----------|
+| `DAILY` | 日常模式，只响应简单请求 | canvas_understand |
+| `PLANNING` | 规划模式，制定执行计划 | canvas_understand, canvas_planning |
+| `WORKING` | 工作模式，执行计划 | 所有画布工具 |
+
+#### 模式切换流程
+
+```
+                    ┌─────────────┐
+                    │   DAILY     │
+                    │  (日常模式)  │
+                    └──────┬──────┘
+                           │
+              用户明确任务需求 (置信度≥0.7)
+                           │
+                           ▼
+                    ┌─────────────┐
+                    │  PLANNING   │
+                    │  (规划模式)  │
+                    └──────┬──────┘
+                           │
+                    用户确认计划
+                           │
+                           ▼
+                    ┌─────────────┐
+                    │  WORKING    │
+                    │  (工作模式)  │
+                    └─────────────┘
+```
+
+#### 工具集
+
+| 工具 | 功能 |
+|------|------|
+| `CanvasUnderstandTool` | 理解画布状态和元素信息 |
+| `CanvasEditTool` | 编辑选中元素 |
+| `CanvasGlobalEditTool` | 全局编辑操作 |
+| `CanvasGenerateTool` | 生成新内容 |
+| `CanvasOperateTool` | 执行画布操作 |
+| `CanvasSuggestTool` | AI辅助建议 |
+| `CanvasImageEditTool` | 图片编辑 |
+| `CanvasDrawTool` | SVG路径绘制 |
+| `CanvasShapeTool` | 预定义形状绘制 |
+| `CanvasTransformTool` | 元素变换 |
+| `CanvasUndoTool` | 撤销操作 |
+| `CanvasSnapshotTool` | 获取画布快照 |
+
+#### 技能系统 (Skills)
+
+基于YAML定义的技能框架，渐进式披露：
+
+| 技能 | 说明 |
+|------|------|
+| `canvas_understand` | 理解画布状态 |
+| `canvas_draw` | SVG自由曲线绘制 |
+| `canvas_edit` | 编辑选中/框选内容 |
+| `canvas_undo` | 回撤绘制（橡皮擦） |
+| `canvas_snapshot` | 获取画布视觉快照 |
+| `canvas_planning` | 规划模式专用技能 |
+
+#### ReAct循环实现
+
+```python
+async def _run_react_loop(self) -> str:
+    step = 0
+    while step < self.max_steps:
+        # 1. Think: 调用 LLM 生成响应
+        response = await self.llm.generate(
+            messages=current_messages,
+            tools=current_tool_schemas,
+        )
+
+        # 2. Act: 执行工具调用
+        for tool_call in response.tool_calls:
+            tool_result = await tool.execute(**arguments)
+
+        # 3. Observe: 观察结果并继续循环
+        if not response.tool_calls:
+            return response_text  # 完成
+
+        step += 1
+```
+
+---
+
+### 目录结构
+
+```
+studio/canvas/
+├── canvas_agent.py          # CanvasAgent (ReAct循环、模式切换)
+├── canvas_core.py           # CanvasCore (状态管理、操作引擎)
+├── canvas_prompt.py         # 系统提示词和上下文模板
+├── mode_router.py           # ML+LLM混合路由
+├── canvas_storage.py        # 画布存储
+├── canvas_sync.py          # 画布同步
+├── selection_extractor.py   # 框选提取
+├── canvas_tools.py          # 工具定义
+├── canvas_tool_result_store.py  # 工具结果存储
+└── skills/                  # 技能系统
+    ├── _registry.yaml       # 技能注册表
+    ├── canvas_understand.yaml
+    ├── canvas_draw.yaml
+    ├── canvas_edit.yaml
+    ├── canvas_undo.yaml
+    ├── canvas_snapshot.yaml
+    └── canvas_planning.yaml
+```
+
+---
+
+### 快速使用
+
+```python
+# 1. 创建画布核心
+canvas_core = CanvasCore(
+    canvas_id="canvas_001",
+    width=1920,
+    height=1080
+)
+
+# 2. 创建画布Agent
+agent = CanvasAgent(
+    llm_client=llm_gateway,
+    canvas_core=canvas_core,
+    orchestrator=orchestrator
+)
+
+# 3. 处理用户消息
+result = await agent.chat(
+    session=canvas_session,
+    user_message="帮我画一个圆形"
+)
+```
 
 ### 数据存储
 
 ```
-data/studio/
-├── sessions/{session_id}/
-│   ├── versions/v1/items.json  # 版本快照
-│   └── current/images/        # 当前版本文件
+data/studio/canvases/
 ├── canvases/
-│   └── {canvas_id}.json       # 画布数据
-└── materials/                  # 素材文件
-```
+│   └── {canvas_id}.json    # 画布数据
+└── metadata/
+    └── index.json           # 元数据索引
 
-### 快速使用
-
-```bash
-# 1. 启动服务
-python start_all.py
-
-# 2. 访问 http://localhost:3000
-
-# 3. 创建会话 → 输入需求 → 确认方案 → 生成内容 → 迭代优化 → 发布
+data/canvas_tool_results/
+└── {canvas_id}/           # 工具结果归档
 ```
 
 ---
