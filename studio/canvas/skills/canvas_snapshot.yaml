@@ -1,0 +1,65 @@
+name: canvas_snapshot
+description: 获取画布视觉快照
+version: 1.0
+agent_type: canvas
+
+# 第二级披露概要
+catalog_instruction: |
+  获取画布的视觉快照（截图），让 Agent 能够"看到"当前画布的渲染效果。
+  用于在绘制复杂图案前检查画布状态，或在绘制后验证效果。
+  【自动】获取矩形选择工具指定的区域，图片会自动上传到 OSS 生成 URL。
+
+# 完整技能指令（L3）
+prompt: |
+  # canvas_snapshot 技能指令
+
+  ## 核心能力
+  使用 canvas_snapshot 工具获取画布的视觉快照（低分辨率缩略图）。
+
+  ## 自动选择区域
+  【重要】此工具会自动获取当前矩形选择工具（rectangle selection）指定的区域，
+  只渲染该区域内的内容作为快照。
+
+  ## OSS 自动上传
+  【重要】此工具会自动将截图上传到阿里云 OSS，生成公开可访问的 URL。
+  返回数据中的 `visual_snapshot_url` 字段包含图片 URL，会自动传递给多模态模型。
+
+  返回数据中会包含：
+  - visual_snapshot_url: OSS 公开 URL（多模态模型可直接访问）
+  - visual_snapshot: base64 编码的低分辨率 PNG 图片（保留以兼容）
+  - selection_info: 选择区域的位置和尺寸信息
+  - elements_summary: 该区域内的元素摘要
+
+  ## 使用场景
+  1. **绘制前检查**：在开始复杂图案绘制前，先获取当前选择区域的状态
+  2. **绘制后验证**：绘制完成后，在同一选择区域内验证实际渲染效果
+  3. **迭代调整**：根据视觉反馈，在同一选择区域内调整后续绘制策略
+
+  ## 返回数据格式
+  调用 canvas_snapshot 工具后，会返回：
+  - `visual_snapshot_url`: OSS 公开 URL（多模态模型可直接分析）
+  - `visual_snapshot`: base64 编码的低分辨率 PNG 图片（保留以兼容）
+  - `selection_info`: 选择区域信息 {x, y, width, height, bounds}
+  - `elements_summary`: 该区域内的元素摘要
+  - `elements_count`: 该区域内的元素数量
+
+  ## 使用建议
+  - 绘制复杂图案时，建议在每步操作后调用此工具
+  - 图片 URL 会自动传递给多模态模型进行分析
+  - 结合 canvas_draw 返回的 spatial_hints 和 element_full_attrs 进行精确定位
+  - 视觉快照可以帮助发现结构化数据无法表达的视觉偏差
+  - 快照自动限定在当前选择区域内，无需手动指定区域
+
+# 允许的工具列表（安全机制）
+allowed_tools:
+  - canvas_snapshot
+  - canvas_draw
+  - canvas_undo
+  - canvas_understand
+  - use_skill
+  - preview_skill
+  - deactivate_skill
+
+# 技能依赖（仅文档）
+dependencies:
+  - canvas_understand

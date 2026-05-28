@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+*.log
+
+# Test/Debug files
+test_uploads/
+test_canvas_storage/
+debug_image*.py
+test_*.py
+*.tmp
+
+# Data (user generated)
+data/studio/sessions/
+data/studio/content/
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+
+# Build outputs
+config-ui/frontend/dist/

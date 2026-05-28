@@ -1,0 +1,840 @@
+{
+  "keyword": {
+    "method": "keyword",
+    "accuracy": 0.8846153846153846,
+    "correct": 23,
+    "total": 26,
+    "avg_latency_ms": 0.03839456118070163,
+    "results": [
+      {
+        "message": "你好啊，今天怎么样？",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 daily 关键词",
+        "category": "greeting"
+      },
+      {
+        "message": "早上好！",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 daily 关键词",
+        "category": "greeting"
+      },
+      {
+        "message": "晚安，明天见",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 daily 关键词",
+        "category": "greeting"
+      },
+      {
+        "message": "今天天气真不错",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 2 个 daily 关键词",
+        "category": "casual"
+      },
+      {
+        "message": "我想聊聊天",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 2 个 daily 关键词",
+        "category": "casual"
+      },
+      {
+        "message": "谢谢你帮我",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.5,
+        "correct": true,
+        "latency_ms": 0.9982585906982422,
+        "reason": "daily(1) >= planning(1)",
+        "category": "gratitude"
+      },
+      {
+        "message": "这个想法很有趣",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "无关键词命中，默认 daily",
+        "category": "casual"
+      },
+      {
+        "message": "再见啦",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 daily 关键词",
+        "category": "farewell"
+      },
+      {
+        "message": "帮我倒杯水",
+        "expected": "daily",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": false,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 planning 关键词",
+        "category": "casual_request"
+      },
+      {
+        "message": "算了，没什么特别的",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "无关键词命中，默认 daily",
+        "category": "casual"
+      },
+      {
+        "message": "请帮我画一个史蒂夫",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 4 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "帮我设计一个logo",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "能否制作一个宣传海报",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想画一幅画",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 planning 关键词",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我创建一个图标",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "请根据这张图片绘制一个类似的",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 3 个 planning 关键词",
+        "category": "reference_task"
+      },
+      {
+        "message": "在指定区域绘制一个图形",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想做一个表情包",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 0.0,
+        "reason": "无关键词命中，默认 daily",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我生成一张图片",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "把红色改成蓝色",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 0.0,
+        "reason": "无关键词命中，默认 daily",
+        "category": "modification_task"
+      },
+      {
+        "message": "重新调整一下尺寸",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 planning 关键词",
+        "category": "modification_task"
+      },
+      {
+        "message": "在这个基础上添加一些装饰",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 planning 关键词",
+        "category": "reference_task"
+      },
+      {
+        "message": "你好，能帮我看看这个吗",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.5,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "daily(1) >= planning(1)",
+        "category": "boundary"
+      },
+      {
+        "message": "我有个想法",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "无关键词命中，默认 daily",
+        "category": "boundary"
+      },
+      {
+        "message": "帮忙看一下",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "无关键词命中，默认 daily",
+        "category": "boundary"
+      },
+      {
+        "message": "帮我",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 0.0,
+        "reason": "命中 1 个 planning 关键词",
+        "category": "boundary"
+      }
+    ]
+  },
+  "llm": {
+    "method": "llm",
+    "accuracy": 0.5,
+    "correct": 13,
+    "total": 26,
+    "avg_latency_ms": 2074.4376457654516,
+    "results": [
+      {
+        "message": "你好啊，今天怎么样？",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2709.8631858825684,
+        "reason": "LLM 请求失败: 404",
+        "category": "greeting"
+      },
+      {
+        "message": "早上好！",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2057.4467182159424,
+        "reason": "LLM 请求失败: 404",
+        "category": "greeting"
+      },
+      {
+        "message": "晚安，明天见",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2040.818452835083,
+        "reason": "LLM 请求失败: 404",
+        "category": "greeting"
+      },
+      {
+        "message": "今天天气真不错",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2041.006326675415,
+        "reason": "LLM 请求失败: 404",
+        "category": "casual"
+      },
+      {
+        "message": "我想聊聊天",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2041.456699371338,
+        "reason": "LLM 请求失败: 404",
+        "category": "casual"
+      },
+      {
+        "message": "谢谢你帮我",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2035.1531505584717,
+        "reason": "LLM 请求失败: 404",
+        "category": "gratitude"
+      },
+      {
+        "message": "这个想法很有趣",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2048.413038253784,
+        "reason": "LLM 请求失败: 404",
+        "category": "casual"
+      },
+      {
+        "message": "再见啦",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2036.3903045654297,
+        "reason": "LLM 请求失败: 404",
+        "category": "farewell"
+      },
+      {
+        "message": "帮我倒杯水",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2056.8156242370605,
+        "reason": "LLM 请求失败: 404",
+        "category": "casual_request"
+      },
+      {
+        "message": "算了，没什么特别的",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2060.5571269989014,
+        "reason": "LLM 请求失败: 404",
+        "category": "casual"
+      },
+      {
+        "message": "请帮我画一个史蒂夫",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2071.044921875,
+        "reason": "LLM 请求失败: 404",
+        "category": "explicit_task"
+      },
+      {
+        "message": "帮我设计一个logo",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2055.5267333984375,
+        "reason": "LLM 请求失败: 404",
+        "category": "explicit_task"
+      },
+      {
+        "message": "能否制作一个宣传海报",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2053.9441108703613,
+        "reason": "LLM 请求失败: 404",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想画一幅画",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2051.568031311035,
+        "reason": "LLM 请求失败: 404",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我创建一个图标",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2050.668716430664,
+        "reason": "LLM 请求失败: 404",
+        "category": "explicit_task"
+      },
+      {
+        "message": "请根据这张图片绘制一个类似的",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2047.058343887329,
+        "reason": "LLM 请求失败: 404",
+        "category": "reference_task"
+      },
+      {
+        "message": "在指定区域绘制一个图形",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2051.7539978027344,
+        "reason": "LLM 请求失败: 404",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想做一个表情包",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2052.608013153076,
+        "reason": "LLM 请求失败: 404",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我生成一张图片",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2046.9248294830322,
+        "reason": "LLM 请求失败: 404",
+        "category": "explicit_task"
+      },
+      {
+        "message": "把红色改成蓝色",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2041.0642623901367,
+        "reason": "LLM 请求失败: 404",
+        "category": "modification_task"
+      },
+      {
+        "message": "重新调整一下尺寸",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2037.3950004577637,
+        "reason": "LLM 请求失败: 404",
+        "category": "modification_task"
+      },
+      {
+        "message": "在这个基础上添加一些装饰",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2052.8674125671387,
+        "reason": "LLM 请求失败: 404",
+        "category": "reference_task"
+      },
+      {
+        "message": "你好，能帮我看看这个吗",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2057.5222969055176,
+        "reason": "LLM 请求失败: 404",
+        "category": "boundary"
+      },
+      {
+        "message": "我有个想法",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2053.166627883911,
+        "reason": "LLM 请求失败: 404",
+        "category": "boundary"
+      },
+      {
+        "message": "帮忙看一下",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2042.0148372650146,
+        "reason": "LLM 请求失败: 404",
+        "category": "boundary"
+      },
+      {
+        "message": "帮我",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2042.330026626587,
+        "reason": "LLM 请求失败: 404",
+        "category": "boundary"
+      }
+    ]
+  },
+  "hybrid": {
+    "method": "hybrid",
+    "accuracy": 0.8846153846153846,
+    "correct": 23,
+    "total": 26,
+    "avg_latency_ms": 1893.1403343494121,
+    "method_distribution": {
+      "keyword": 18,
+      "llm_fallback": 6,
+      "keyword_high": 2
+    },
+    "results": [
+      {
+        "message": "你好啊，今天怎么样？",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2048.076391220093,
+        "method": "keyword",
+        "reason": "命中 1 个 daily 关键词",
+        "category": "greeting"
+      },
+      {
+        "message": "早上好！",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2058.7944984436035,
+        "method": "keyword",
+        "reason": "命中 1 个 daily 关键词",
+        "category": "greeting"
+      },
+      {
+        "message": "晚安，明天见",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2054.314613342285,
+        "method": "keyword",
+        "reason": "命中 1 个 daily 关键词",
+        "category": "greeting"
+      },
+      {
+        "message": "今天天气真不错",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 2053.6651611328125,
+        "method": "keyword",
+        "reason": "命中 2 个 daily 关键词",
+        "category": "casual"
+      },
+      {
+        "message": "我想聊聊天",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 2045.10498046875,
+        "method": "keyword",
+        "reason": "命中 2 个 daily 关键词",
+        "category": "casual"
+      },
+      {
+        "message": "谢谢你帮我",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.5,
+        "correct": true,
+        "latency_ms": 2062.046766281128,
+        "method": "keyword",
+        "reason": "daily(1) >= planning(1)",
+        "category": "gratitude"
+      },
+      {
+        "message": "这个想法很有趣",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2051.133632659912,
+        "method": "llm_fallback",
+        "reason": "[关键词 0.30] LLM 请求失败: 404",
+        "category": "casual"
+      },
+      {
+        "message": "再见啦",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2062.592029571533,
+        "method": "keyword",
+        "reason": "命中 1 个 daily 关键词",
+        "category": "farewell"
+      },
+      {
+        "message": "帮我倒杯水",
+        "expected": "daily",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": false,
+        "latency_ms": 2051.9371032714844,
+        "method": "keyword",
+        "reason": "命中 1 个 planning 关键词",
+        "category": "casual_request"
+      },
+      {
+        "message": "算了，没什么特别的",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2032.8116416931152,
+        "method": "llm_fallback",
+        "reason": "[关键词 0.30] LLM 请求失败: 404",
+        "category": "casual"
+      },
+      {
+        "message": "请帮我画一个史蒂夫",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 0.0,
+        "method": "keyword_high",
+        "reason": "命中 4 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "帮我设计一个logo",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 2047.91259765625,
+        "method": "keyword",
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "能否制作一个宣传海报",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2050.976276397705,
+        "method": "keyword",
+        "reason": "命中 1 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想画一幅画",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2048.9373207092285,
+        "method": "keyword",
+        "reason": "命中 1 个 planning 关键词",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我创建一个图标",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 2061.3558292388916,
+        "method": "keyword",
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "请根据这张图片绘制一个类似的",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 0.0,
+        "method": "keyword_high",
+        "reason": "命中 3 个 planning 关键词",
+        "category": "reference_task"
+      },
+      {
+        "message": "在指定区域绘制一个图形",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 2051.017999649048,
+        "method": "keyword",
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想做一个表情包",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2044.7156429290771,
+        "method": "llm_fallback",
+        "reason": "[关键词 0.30] LLM 请求失败: 404",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我生成一张图片",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.8,
+        "correct": true,
+        "latency_ms": 2057.0595264434814,
+        "method": "keyword",
+        "reason": "命中 2 个 planning 关键词",
+        "category": "explicit_task"
+      },
+      {
+        "message": "把红色改成蓝色",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": false,
+        "latency_ms": 2047.1668243408203,
+        "method": "llm_fallback",
+        "reason": "[关键词 0.30] LLM 请求失败: 404",
+        "category": "modification_task"
+      },
+      {
+        "message": "重新调整一下尺寸",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2039.7276878356934,
+        "method": "keyword",
+        "reason": "命中 1 个 planning 关键词",
+        "category": "modification_task"
+      },
+      {
+        "message": "在这个基础上添加一些装饰",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2066.4868354797363,
+        "method": "keyword",
+        "reason": "命中 1 个 planning 关键词",
+        "category": "reference_task"
+      },
+      {
+        "message": "你好，能帮我看看这个吗",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.5,
+        "correct": true,
+        "latency_ms": 2047.4176406860352,
+        "method": "keyword",
+        "reason": "daily(1) >= planning(1)",
+        "category": "boundary"
+      },
+      {
+        "message": "我有个想法",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2050.8949756622314,
+        "method": "llm_fallback",
+        "reason": "[关键词 0.30] LLM 请求失败: 404",
+        "category": "boundary"
+      },
+      {
+        "message": "帮忙看一下",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.3,
+        "correct": true,
+        "latency_ms": 2041.8634414672852,
+        "method": "llm_fallback",
+        "reason": "[关键词 0.30] LLM 请求失败: 404",
+        "category": "boundary"
+      },
+      {
+        "message": "帮我",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.65,
+        "correct": true,
+        "latency_ms": 2045.6392765045166,
+        "method": "keyword",
+        "reason": "命中 1 个 planning 关键词",
+        "category": "boundary"
+      }
+    ]
+  }
+}

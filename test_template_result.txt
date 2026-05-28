@@ -1,0 +1,3 @@
+原始模板: https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-05-06%2FMiniMax-M2.7-highspeed%2F2041699010015662129%2F1d60edbcc66749aea1d909636a72151c4cf310fe65b7cd4cb5e05ca35ddba1e5..png?Expires=1778131360&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=E57V3%2BxeOKDAgujDAl6vFnKr%2BT4%3D
+结果图片: https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/5e/20260506/1123113f/523b20b2-3e34-48a3-9f17-8f4a6035f82b_0.png?Expires=1778131465&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=qam3aCZG8zfBvdJ7klRZCF%2FTKG0%3D
+使用模型: wan2.7-image-pro

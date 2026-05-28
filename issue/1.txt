@@ -1,0 +1,253 @@
+{
+    "session_id": "97d25dc4-8fe7-44f6-bd0d-4d040deb640e",
+    "status": "planning",
+    "current_version": 1,
+    "brief": {
+        "id": "5f708a4a-fe7d-4d80-a68c-acecd4636044",
+        "goal": "plant",
+        "style": "活泼",
+        "keywords": [
+            "MEX蓝牙耳机",
+            "高音质降噪",
+            "长续航",
+            "时尚穿搭"
+        ],
+        "must_include": [
+            "品牌名称MEX",
+            "核心卖点（如30小时续航/主动降噪）"
+        ],
+        "image_style": "摄影实拍",
+        "need_video": true,
+        "need_voiceover": false,
+        "need_text": true,
+        "need_images": true,
+        "need_bgm": true,
+        "bgm_preference": "轻快电子流行",
+        "target_audience": "18-30岁都市青年，注重生活品质与科技潮流",
+        "reference_materials": [],
+        "raw_input": "我需要推广一款蓝牙耳机叫MEX。",
+        "extracted_product_info": {},
+        "created_at": "2026-05-05T16:52:08.132119"
+    },
+    "plan": {
+        "plan_id": "d5385fce-5c10-47fc-8cc7-aa72d1c833f5",
+        "brief_id": "5f708a4a-fe7d-4d80-a68c-acecd4636044",
+        "title": "救命！这副耳机是懂都市打工人和穿搭玩家的🎧✨",
+        "text_sections": [
+            {
+                "section_id": "sec_b43e6277",
+                "section_type": "headline",
+                "content": "",
+                "content_words": 15,
+                "priority": 1,
+                "is_optional": false
+            },
+            {
+                "section_id": "sec_c39f586a",
+                "section_type": "title",
+                "content": "",
+                "content_words": 20,
+                "priority": 1,
+                "is_optional": false
+            },
+            {
+                "section_id": "sec_1213dea9",
+                "section_type": "text",
+                "content": "",
+                "content_words": 420,
+                "priority": 1,
+                "is_optional": false
+            },
+            {
+                "section_id": "sec_1f6842f9",
+                "section_type": "hashtag",
+                "content": "",
+                "content_words": 28,
+                "priority": 2,
+                "is_optional": false
+            },
+            {
+                "section_id": "sec_2b90e75e",
+                "section_type": "cta",
+                "content": "",
+                "content_words": 35,
+                "priority": 1,
+                "is_optional": false
+            }
+        ],
+        "image_plan": {
+            "style": "写实摄影风格，采用专业影棚布光与微距特写，突出耳机材质纹理与真实佩戴感，构图简洁聚焦主体，符合商业级摄影实拍标准",
+            "elements": [
+                "MEX蓝牙耳机及充电盒实物",
+                "品牌名称“MEX”清晰标识",
+                "30小时续航卖点图文标注",
+                "主动降噪（ANC）功能场景暗示（如通勤/办公环境）",
+                "极简质感背景（如浅灰岩板或柔光纯色）"
+            ],
+            "count": 4,
+            "aspect_ratio": "1:1",
+            "color_scheme": "高级哑光黑与银灰色调为主，搭配冷白科技光效，整体通透干净",
+            "reference_image_ids": []
+        },
+        "video_plan": {
+            "duration": 30,
+            "scenes": [
+                {
+                    "scene_id": "场景1",
+                    "description": "动态产品展示与品牌亮相",
+                    "duration": 10,
+                    "visual_prompt": "耳机从包装盒中弹出旋转，背景浮现霓虹色品牌LOGO'MEX'，搭配跳跃的光效粒子"
+                },
+                {
+                    "scene_id": "场景2",
+                    "description": "核心卖点可视化演示",
+                    "duration": 15,
+                    "visual_prompt": "分屏动画：左侧显示电量百分比持续增加至30h，右侧呈现噪音波纹被声波屏障阻挡的特效"
+                },
+                {
+                    "scene_id": "场景3",
+                    "description": "生活场景应用与号召",
+                    "duration": 5,
+                    "visual_prompt": "年轻人戴着耳机在咖啡馆/地铁场景中微笑切换歌曲，画面底部弹出'立即体验MEX'动态按钮"
+                }
+            ],
+            "voiceover": "嘿！通勤路上想拥有私人音乐舱？MEX蓝牙耳机强势登场！30小时超长续航告别充电焦虑，智能主动降噪瞬间过滤嘈杂～现在入手立享首发优惠！",
+            "voice_type": "活力青年男声",
+            "style": "高饱和度色彩+快速转场+电子音效配乐"
+        },
+        "audio_plan": null,
+        "estimated_duration": 75,
+        "version": 1,
+        "metadata": {}
+    },
+    "items": [],
+    "created_at": "2026-05-05T16:52:57.953354",
+    "updated_at": "2026-05-05T16:52:57.953354",
+    "versions": [
+        {
+            "version_number": 1,
+            "created_at": "2026-05-05T16:52:57.953354",
+            "created_by": "orchestrator",
+            "change_summary": "初始版本"
+        }
+    ],
+    "messages": [
+        {
+            "message_id": "a56cd906-49bf-4628-9349-3f7dce275965",
+            "role": "assistant",
+            "content": "这是为你生成的内容方案，请确认：",
+            "timestamp": "2026-05-05T16:52:57.953354",
+            "metadata": {
+                "message_type": "plan",
+                "intent_type": "plan_confirmation",
+                "plan_data": {
+                    "plan_id": "d5385fce-5c10-47fc-8cc7-aa72d1c833f5",
+                    "brief_id": "5f708a4a-fe7d-4d80-a68c-acecd4636044",
+                    "title": "救命！这副耳机是懂都市打工人和穿搭玩家的🎧✨",
+                    "text_sections": [
+                        {
+                            "section_id": "sec_b43e6277",
+                            "section_type": "headline",
+                            "content": "",
+                            "content_words": 15,
+                            "priority": 1,
+                            "is_optional": false
+                        },
+                        {
+                            "section_id": "sec_c39f586a",
+                            "section_type": "title",
+                            "content": "",
+                            "content_words": 20,
+                            "priority": 1,
+                            "is_optional": false
+                        },
+                        {
+                            "section_id": "sec_1213dea9",
+                            "section_type": "text",
+                            "content": "",
+                            "content_words": 420,
+                            "priority": 1,
+                            "is_optional": false
+                        },
+                        {
+                            "section_id": "sec_1f6842f9",
+                            "section_type": "hashtag",
+                            "content": "",
+                            "content_words": 28,
+                            "priority": 2,
+                            "is_optional": false
+                        },
+                        {
+                            "section_id": "sec_2b90e75e",
+                            "section_type": "cta",
+                            "content": "",
+                            "content_words": 35,
+                            "priority": 1,
+                            "is_optional": false
+                        }
+                    ],
+                    "image_plan": {
+                        "style": "写实摄影风格，采用专业影棚布光与微距特写，突出耳机材质纹理与真实佩戴感，构图简洁聚焦主体，符合商业级摄影实拍标准",
+                        "elements": [
+                            "MEX蓝牙耳机及充电盒实物",
+                            "品牌名称“MEX”清晰标识",
+                            "30小时续航卖点图文标注",
+                            "主动降噪（ANC）功能场景暗示（如通勤/办公环境）",
+                            "极简质感背景（如浅灰岩板或柔光纯色）"
+                        ],
+                        "count": 4,
+                        "aspect_ratio": "1:1",
+                        "color_scheme": "高级哑光黑与银灰色调为主，搭配冷白科技光效，整体通透干净",
+                        "reference_image_ids": []
+                    },
+                    "video_plan": {
+                        "duration": 30,
+                        "scenes": [
+                            {
+                                "scene_id": "场景1",
+                                "description": "动态产品展示与品牌亮相",
+                                "duration": 10,
+                                "visual_prompt": "耳机从包装盒中弹出旋转，背景浮现霓虹色品牌LOGO'MEX'，搭配跳跃的光效粒子"
+                            },
+                            {
+                                "scene_id": "场景2",
+                                "description": "核心卖点可视化演示",
+                                "duration": 15,
+                                "visual_prompt": "分屏动画：左侧显示电量百分比持续增加至30h，右侧呈现噪音波纹被声波屏障阻挡的特效"
+                            },
+                            {
+                                "scene_id": "场景3",
+                                "description": "生活场景应用与号召",
+                                "duration": 5,
+                                "visual_prompt": "年轻人戴着耳机在咖啡馆/地铁场景中微笑切换歌曲，画面底部弹出'立即体验MEX'动态按钮"
+                            }
+                        ],
+                        "voiceover": "嘿！通勤路上想拥有私人音乐舱？MEX蓝牙耳机强势登场！30小时超长续航告别充电焦虑，智能主动降噪瞬间过滤嘈杂～现在入手立享首发优惠！",
+                        "voice_type": "活力青年男声",
+                        "style": "高饱和度色彩+快速转场+电子音效配乐"
+                    },
+                    "audio_plan": null,
+                    "estimated_duration": 75,
+                    "version": 1,
+                    "metadata": {}
+                }
+            }
+        },
+        {
+            "message_id": "6284ab28-6080-4fff-8b46-1c97b27b9108",
+            "role": "user",
+            "content": "配图我希望是人物模特佩戴我们的蓝牙耳机，在街道上摆拍，体现我们产品的时尚属性以及高颜值。小清新风格。",
+            "timestamp": "2026-05-05T16:56:35.500986",
+            "metadata": {}
+        },
+        {
+            "message_id": "378aa27d-8260-46cf-8ee8-4b650f444f61",
+            "role": "assistant",
+            "content": "方案已规划完成！🎉 让我为你简单梳理一下：\n\n---\n\n**📝 内容方案预览**\n\n**标题方向：** 「街头拾光📸｜把氛围感戴在耳朵上，今日份OOTD小心机✨」\n\n**文案结构：**\n1. **吸睛标题** — 用场景感+氛围感抓住眼球\n2. **正文内容** (~380字) — 以街拍穿搭视角切入，自然植入产品卖点，强调耳机的高颜值与时尚搭配属性\n3. **热门话题标签** (~70个词) — 覆盖小红书流量关键词\n4. **互动引导 (CTA)** — 引导用户点赞、收藏或评论\n\n**配图方案 (4张, 3:4比例)：**\n- 📷 **风格：** 日系小清新摄影，光线柔和通透，构图干净简约\n- 🎨 **色调：** 低饱和度高明度（奶油白、浅灰、薄荷绿）\n- 📸 **画面元素：**\n  - 佩戴蓝牙耳机的年轻模特在城市街道摆拍\n  - 林荫道/现代建筑等场景营造生活气息\n  - 人物时尚穿搭与神态展示\n  - 蓝牙耳机产品特写细节\n\n---\n\n💬 **你觉得这个方案怎么样？如果满意的话我就开始生成具体内容啦～如果有想调整的地方也随时告诉我！**",
+            "timestamp": "2026-05-05T17:01:08.663541",
+            "metadata": {
+                "message_type": "agent"
+            }
+        }
+    ]
+}

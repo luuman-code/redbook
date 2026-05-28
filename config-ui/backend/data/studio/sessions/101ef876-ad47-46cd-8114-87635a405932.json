@@ -1,0 +1,345 @@
+{
+  "session_id": "101ef876-ad47-46cd-8114-87635a405932",
+  "brief": {
+    "id": "61e662c8-0ca9-4198-b3de-900f37f9787d",
+    "goal": "plant",
+    "style": "活泼",
+    "keywords": [
+      "蓝牙耳机",
+      "通勤神器",
+      "高性价比"
+    ],
+    "must_include": [
+      "MAX耳机外观特写",
+      "佩戴舒适性实测"
+    ],
+    "image_style": "摄影实拍",
+    "need_video": true,
+    "need_voiceover": true,
+    "need_text": true,
+    "need_images": true,
+    "need_bgm": true,
+    "bgm_preference": "轻快电子/城市流行",
+    "target_audience": "18-35岁都市年轻上班族与学生党，注重性价比与日常实用性的科技爱好者",
+    "reference_materials": [],
+    "raw_input": "我需要推广一款蓝牙耳机叫MAX。",
+    "extracted_product_info": {},
+    "template_image_url": null,
+    "created_at": "2026-05-06T20:55:30.875420"
+  },
+  "current_plan": {
+    "plan_id": "633eeb94-a4d7-4934-8f01-6dc0e9ab8d00",
+    "brief_id": "61e662c8-0ca9-4198-b3de-900f37f9787d",
+    "title": "通勤摸鱼神器？这副蓝牙耳机让我地铁上秒变「隐形人」🎧",
+    "text_sections": [
+      {
+        "section_id": "sec_b76858b2",
+        "section_type": "headline",
+        "content": "",
+        "content_words": 12,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_fd604b83",
+        "section_type": "text",
+        "content": "",
+        "content_words": 180,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_7ed3f9c8",
+        "section_type": "text",
+        "content": "",
+        "content_words": 120,
+        "priority": 2,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_a45a65ca",
+        "section_type": "hashtag",
+        "content": "",
+        "content_words": 4,
+        "priority": 3,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_f9f1bfff",
+        "section_type": "cta",
+        "content": "",
+        "content_words": 25,
+        "priority": 2,
+        "is_optional": false
+      }
+    ],
+    "image_plan": {
+      "style": "高清摄影实拍风格，注重产品质感与生活化场景融合，光线自然柔和，突出科技感与亲和力",
+      "elements": [
+        "MAX耳机外观特写（含细节如单元、触控区、品牌标识）",
+        "佩戴舒适性实测（不同头型/耳型用户佩戴展示，强调无压迫感、稳固贴合）",
+        "轻量化设计对比（如手持耳机与常见物品尺寸参照）",
+        "使用场景延伸（如通勤、运动、办公等动态抓拍）"
+      ],
+      "count": 5,
+      "aspect_ratio": "4:3",
+      "color_scheme": "主色调：深空灰+哑光金属银；辅助色：活力橙点缀（用于品牌标识或触控反馈高亮）；背景采用低饱和中性灰或浅米白，确保产品主体突出",
+      "reference_image_ids": []
+    },
+    "video_plan": {
+      "duration": 30,
+      "scenes": [
+        {
+          "scene_id": "场景1",
+          "description": "开场活力四射，镜头快速推进至MAX耳机悬浮旋转，背景为渐变霓虹色，突出金属质感与流线型设计；随后特写耳塞表面微纹理与品牌LOGO发光效果",
+          "duration": 8,
+          "visual_prompt": "3D渲染MAX耳机在动态光效中360°旋转，高清材质反射，慢动作聚焦LOGO微光闪烁"
+        },
+        {
+          "scene_id": "场景2",
+          "description": "真人实测佩戴：不同头型用户（短发/长发/戴眼镜）轻松佩戴MAX耳机，无压迫感；镜头切近景展示耳翼贴合耳廓细节，配合夸张但自然的舒适表情（如闭眼微笑、轻跳不脱落）",
+          "duration": 12,
+          "visual_prompt": "多角度实拍风格动画：手部动作将耳机轻放入耳，耳翼自适应形变贴合，慢镜头展示跳跃时耳机稳固不动"
+        },
+        {
+          "scene_id": "场景3",
+          "description": "趣味对比：用弹簧模拟传统耳机压迫感 vs MAX耳机‘云朵托举’式支撑，最后定格MAX耳机悬浮于手掌上，弹出文字‘轻若无物，稳如磐石’",
+          "duration": 10,
+          "visual_prompt": "卡通化物理模拟动画：左侧弹簧压缩变形+叹号图标，右侧云朵托起耳机轻盈弹跳，结尾手掌托举耳机特写，文字粒子浮现"
+        }
+      ],
+      "voiceover": "听感升级？不，是‘戴’感革命！MAX蓝牙耳机——0.8g超轻机身，人体工学耳翼，狂甩不掉，久戴不累！现在戴上，感受什么叫‘忘了它存在’的自由～",
+      "voice_type": "年轻女声，带轻微电子音效点缀",
+      "style": "活泼科技风，节奏明快，融合3D动画与拟真实测感"
+    },
+    "audio_plan": {
+      "tts_text": "今天给大家分享MAX耳机外观特写, 佩戴舒适性实测，活泼风格介绍",
+      "voice": "alloy",
+      "speed": 1.0,
+      "bgm_style": "轻快电子/城市流行"
+    },
+    "estimated_duration": 83,
+    "version": 1,
+    "metadata": {}
+  },
+  "current_version": 1,
+  "items": [],
+  "status": "planning",
+  "created_at": "2026-05-06T20:56:18.748428",
+  "updated_at": "2026-05-06T20:56:18.748428",
+  "versions": [
+    {
+      "version_id": "101ef876-ad47-46cd-8114-87635a405932_v1",
+      "version_number": 1,
+      "session_id": "101ef876-ad47-46cd-8114-87635a405932",
+      "plan_snapshot": {
+        "plan_id": "633eeb94-a4d7-4934-8f01-6dc0e9ab8d00",
+        "brief_id": "61e662c8-0ca9-4198-b3de-900f37f9787d",
+        "title": "通勤摸鱼神器？这副蓝牙耳机让我地铁上秒变「隐形人」🎧",
+        "text_sections": [
+          {
+            "section_id": "sec_b76858b2",
+            "section_type": "headline",
+            "content": "",
+            "content_words": 12,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_fd604b83",
+            "section_type": "text",
+            "content": "",
+            "content_words": 180,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_7ed3f9c8",
+            "section_type": "text",
+            "content": "",
+            "content_words": 120,
+            "priority": 2,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_a45a65ca",
+            "section_type": "hashtag",
+            "content": "",
+            "content_words": 4,
+            "priority": 3,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_f9f1bfff",
+            "section_type": "cta",
+            "content": "",
+            "content_words": 25,
+            "priority": 2,
+            "is_optional": false
+          }
+        ],
+        "image_plan": {
+          "style": "高清摄影实拍风格，注重产品质感与生活化场景融合，光线自然柔和，突出科技感与亲和力",
+          "elements": [
+            "MAX耳机外观特写（含细节如单元、触控区、品牌标识）",
+            "佩戴舒适性实测（不同头型/耳型用户佩戴展示，强调无压迫感、稳固贴合）",
+            "轻量化设计对比（如手持耳机与常见物品尺寸参照）",
+            "使用场景延伸（如通勤、运动、办公等动态抓拍）"
+          ],
+          "count": 5,
+          "aspect_ratio": "4:3",
+          "color_scheme": "主色调：深空灰+哑光金属银；辅助色：活力橙点缀（用于品牌标识或触控反馈高亮）；背景采用低饱和中性灰或浅米白，确保产品主体突出",
+          "reference_image_ids": []
+        },
+        "video_plan": {
+          "duration": 30,
+          "scenes": [
+            {
+              "scene_id": "场景1",
+              "description": "开场活力四射，镜头快速推进至MAX耳机悬浮旋转，背景为渐变霓虹色，突出金属质感与流线型设计；随后特写耳塞表面微纹理与品牌LOGO发光效果",
+              "duration": 8,
+              "visual_prompt": "3D渲染MAX耳机在动态光效中360°旋转，高清材质反射，慢动作聚焦LOGO微光闪烁"
+            },
+            {
+              "scene_id": "场景2",
+              "description": "真人实测佩戴：不同头型用户（短发/长发/戴眼镜）轻松佩戴MAX耳机，无压迫感；镜头切近景展示耳翼贴合耳廓细节，配合夸张但自然的舒适表情（如闭眼微笑、轻跳不脱落）",
+              "duration": 12,
+              "visual_prompt": "多角度实拍风格动画：手部动作将耳机轻放入耳，耳翼自适应形变贴合，慢镜头展示跳跃时耳机稳固不动"
+            },
+            {
+              "scene_id": "场景3",
+              "description": "趣味对比：用弹簧模拟传统耳机压迫感 vs MAX耳机‘云朵托举’式支撑，最后定格MAX耳机悬浮于手掌上，弹出文字‘轻若无物，稳如磐石’",
+              "duration": 10,
+              "visual_prompt": "卡通化物理模拟动画：左侧弹簧压缩变形+叹号图标，右侧云朵托起耳机轻盈弹跳，结尾手掌托举耳机特写，文字粒子浮现"
+            }
+          ],
+          "voiceover": "听感升级？不，是‘戴’感革命！MAX蓝牙耳机——0.8g超轻机身，人体工学耳翼，狂甩不掉，久戴不累！现在戴上，感受什么叫‘忘了它存在’的自由～",
+          "voice_type": "年轻女声，带轻微电子音效点缀",
+          "style": "活泼科技风，节奏明快，融合3D动画与拟真实测感"
+        },
+        "audio_plan": {
+          "tts_text": "今天给大家分享MAX耳机外观特写, 佩戴舒适性实测，活泼风格介绍",
+          "voice": "alloy",
+          "speed": 1.0,
+          "bgm_style": "轻快电子/城市流行"
+        },
+        "estimated_duration": 83,
+        "version": 1,
+        "metadata": {}
+      },
+      "items_snapshot": [],
+      "change_summary": "初始版本",
+      "created_by": "orchestrator",
+      "created_at": "2026-05-06T20:56:18.748428",
+      "metadata": {}
+    }
+  ],
+  "metadata": {},
+  "messages": [
+    {
+      "message_id": "0025e0f5-726d-4c09-8c6f-fbc1ead4d7aa",
+      "role": "assistant",
+      "content": "这是为你生成的内容方案，请确认：",
+      "timestamp": "2026-05-06T20:56:18.748428",
+      "metadata": {
+        "message_type": "plan",
+        "intent_type": "plan_confirmation",
+        "plan_data": {
+          "plan_id": "633eeb94-a4d7-4934-8f01-6dc0e9ab8d00",
+          "brief_id": "61e662c8-0ca9-4198-b3de-900f37f9787d",
+          "title": "通勤摸鱼神器？这副蓝牙耳机让我地铁上秒变「隐形人」🎧",
+          "text_sections": [
+            {
+              "section_id": "sec_b76858b2",
+              "section_type": "headline",
+              "content": "",
+              "content_words": 12,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_fd604b83",
+              "section_type": "text",
+              "content": "",
+              "content_words": 180,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_7ed3f9c8",
+              "section_type": "text",
+              "content": "",
+              "content_words": 120,
+              "priority": 2,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_a45a65ca",
+              "section_type": "hashtag",
+              "content": "",
+              "content_words": 4,
+              "priority": 3,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_f9f1bfff",
+              "section_type": "cta",
+              "content": "",
+              "content_words": 25,
+              "priority": 2,
+              "is_optional": false
+            }
+          ],
+          "image_plan": {
+            "style": "高清摄影实拍风格，注重产品质感与生活化场景融合，光线自然柔和，突出科技感与亲和力",
+            "elements": [
+              "MAX耳机外观特写（含细节如单元、触控区、品牌标识）",
+              "佩戴舒适性实测（不同头型/耳型用户佩戴展示，强调无压迫感、稳固贴合）",
+              "轻量化设计对比（如手持耳机与常见物品尺寸参照）",
+              "使用场景延伸（如通勤、运动、办公等动态抓拍）"
+            ],
+            "count": 5,
+            "aspect_ratio": "4:3",
+            "color_scheme": "主色调：深空灰+哑光金属银；辅助色：活力橙点缀（用于品牌标识或触控反馈高亮）；背景采用低饱和中性灰或浅米白，确保产品主体突出",
+            "reference_image_ids": []
+          },
+          "video_plan": {
+            "duration": 30,
+            "scenes": [
+              {
+                "scene_id": "场景1",
+                "description": "开场活力四射，镜头快速推进至MAX耳机悬浮旋转，背景为渐变霓虹色，突出金属质感与流线型设计；随后特写耳塞表面微纹理与品牌LOGO发光效果",
+                "duration": 8,
+                "visual_prompt": "3D渲染MAX耳机在动态光效中360°旋转，高清材质反射，慢动作聚焦LOGO微光闪烁"
+              },
+              {
+                "scene_id": "场景2",
+                "description": "真人实测佩戴：不同头型用户（短发/长发/戴眼镜）轻松佩戴MAX耳机，无压迫感；镜头切近景展示耳翼贴合耳廓细节，配合夸张但自然的舒适表情（如闭眼微笑、轻跳不脱落）",
+                "duration": 12,
+                "visual_prompt": "多角度实拍风格动画：手部动作将耳机轻放入耳，耳翼自适应形变贴合，慢镜头展示跳跃时耳机稳固不动"
+              },
+              {
+                "scene_id": "场景3",
+                "description": "趣味对比：用弹簧模拟传统耳机压迫感 vs MAX耳机‘云朵托举’式支撑，最后定格MAX耳机悬浮于手掌上，弹出文字‘轻若无物，稳如磐石’",
+                "duration": 10,
+                "visual_prompt": "卡通化物理模拟动画：左侧弹簧压缩变形+叹号图标，右侧云朵托起耳机轻盈弹跳，结尾手掌托举耳机特写，文字粒子浮现"
+              }
+            ],
+            "voiceover": "听感升级？不，是‘戴’感革命！MAX蓝牙耳机——0.8g超轻机身，人体工学耳翼，狂甩不掉，久戴不累！现在戴上，感受什么叫‘忘了它存在’的自由～",
+            "voice_type": "年轻女声，带轻微电子音效点缀",
+            "style": "活泼科技风，节奏明快，融合3D动画与拟真实测感"
+          },
+          "audio_plan": {
+            "tts_text": "今天给大家分享MAX耳机外观特写, 佩戴舒适性实测，活泼风格介绍",
+            "voice": "alloy",
+            "speed": 1.0,
+            "bgm_style": "轻快电子/城市流行"
+          },
+          "estimated_duration": 83,
+          "version": 1,
+          "metadata": {}
+        }
+      }
+    }
+  ]
+}

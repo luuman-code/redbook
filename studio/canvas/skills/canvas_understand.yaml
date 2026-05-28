@@ -1,0 +1,32 @@
+name: canvas_understand
+description: 理解画板状态和内容
+version: 1.0
+agent_type: canvas
+
+# 第二级披露概要
+catalog_instruction: |
+  获取并理解当前画布状态、选择内容和操作历史。
+  仅用于理解，不执行任何修改。
+
+# 完整技能指令（L3）
+prompt: |
+  # canvas_understand 技能指令
+
+  ## 核心能力
+  使用 canvas_understand 工具获取并理解当前画布状态。
+
+  ## 使用场景
+  - 需要了解当前画布上有哪些元素时
+  - 需要理解选择区域的内容时
+  - 需要查看操作历史时
+  - 在执行编辑操作前获取上下文时
+
+  ## 重要说明
+  此工具仅用于理解当前状态，不会修改任何内容。
+  请在需要修改画板之前先调用此工具了解当前状态。
+
+# 允许的工具列表（此技能不限制工具，所有工具都可使用）
+allowed_tools: []
+
+# 技能依赖（无依赖）
+dependencies: []

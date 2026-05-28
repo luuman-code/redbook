@@ -1,0 +1,813 @@
+{
+  "ml": {
+    "method": "ml",
+    "accuracy": 0.8846153846153846,
+    "correct": 23,
+    "total": 26,
+    "avg_latency_ms": 0.7964831132155198,
+    "results": [
+      {
+        "message": "你好啊，今天怎么样？",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.968445683350195,
+        "correct": true,
+        "latency_ms": 1.0678768157958984,
+        "category": "greeting"
+      },
+      {
+        "message": "早上好！",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9660789411761238,
+        "correct": true,
+        "latency_ms": 1.0607242584228516,
+        "category": "greeting"
+      },
+      {
+        "message": "晚安，明天见",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9785524558683554,
+        "correct": true,
+        "latency_ms": 0.5314350128173828,
+        "category": "greeting"
+      },
+      {
+        "message": "今天天气真不错",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9537160527722158,
+        "correct": true,
+        "latency_ms": 1.0633468627929688,
+        "category": "casual"
+      },
+      {
+        "message": "我想聊聊天",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9621485821519794,
+        "correct": true,
+        "latency_ms": 0.5428791046142578,
+        "category": "casual"
+      },
+      {
+        "message": "谢谢你帮我",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9441488281855935,
+        "correct": true,
+        "latency_ms": 0.0,
+        "category": "gratitude"
+      },
+      {
+        "message": "这个想法很有趣",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9187587744038611,
+        "correct": true,
+        "latency_ms": 1.264333724975586,
+        "category": "casual"
+      },
+      {
+        "message": "再见啦",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9697987470853321,
+        "correct": true,
+        "latency_ms": 0.0,
+        "category": "farewell"
+      },
+      {
+        "message": "帮我倒杯水",
+        "expected": "daily",
+        "predicted": "planning",
+        "confidence": 0.6439910094970074,
+        "correct": false,
+        "latency_ms": 1.4562606811523438,
+        "category": "casual_request"
+      },
+      {
+        "message": "算了，没什么特别的",
+        "expected": "daily",
+        "predicted": "planning",
+        "confidence": 0.6386185427450921,
+        "correct": false,
+        "latency_ms": 0.9984970092773438,
+        "category": "casual"
+      },
+      {
+        "message": "请帮我画一个史蒂夫",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.982701075790645,
+        "correct": true,
+        "latency_ms": 0.0,
+        "category": "explicit_task"
+      },
+      {
+        "message": "帮我设计一个logo",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9736702078832665,
+        "correct": true,
+        "latency_ms": 1.3163089752197266,
+        "category": "explicit_task"
+      },
+      {
+        "message": "能否制作一个宣传海报",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9586200913683136,
+        "correct": true,
+        "latency_ms": 1.3976097106933594,
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想画一幅画",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9412630873175816,
+        "correct": true,
+        "latency_ms": 0.0,
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我创建一个图标",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9667305784763451,
+        "correct": true,
+        "latency_ms": 1.2271404266357422,
+        "category": "explicit_task"
+      },
+      {
+        "message": "请根据这张图片绘制一个类似的",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9733483971458711,
+        "correct": true,
+        "latency_ms": 1.1620521545410156,
+        "category": "reference_task"
+      },
+      {
+        "message": "在指定区域绘制一个图形",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9625820636257638,
+        "correct": true,
+        "latency_ms": 0.0,
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想做一个表情包",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9313447555400188,
+        "correct": true,
+        "latency_ms": 1.1539459228515625,
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我生成一张图片",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9667305784763451,
+        "correct": true,
+        "latency_ms": 1.0020732879638672,
+        "category": "explicit_task"
+      },
+      {
+        "message": "把红色改成蓝色",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9264592220112396,
+        "correct": true,
+        "latency_ms": 0.0,
+        "category": "modification_task"
+      },
+      {
+        "message": "重新调整一下尺寸",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9502195911836742,
+        "correct": true,
+        "latency_ms": 0.9958744049072266,
+        "category": "modification_task"
+      },
+      {
+        "message": "在这个基础上添加一些装饰",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9663665718197703,
+        "correct": true,
+        "latency_ms": 1.2717247009277344,
+        "category": "reference_task"
+      },
+      {
+        "message": "你好，能帮我看看这个吗",
+        "expected": "daily",
+        "predicted": "planning",
+        "confidence": 0.5795643131603997,
+        "correct": false,
+        "latency_ms": 0.0,
+        "category": "boundary"
+      },
+      {
+        "message": "我有个想法",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.5923508192425706,
+        "correct": true,
+        "latency_ms": 1.0159015655517578,
+        "category": "boundary"
+      },
+      {
+        "message": "帮忙看一下",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.5923508192425706,
+        "correct": true,
+        "latency_ms": 0.9982585906982422,
+        "category": "boundary"
+      },
+      {
+        "message": "帮我...",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.6439910094970074,
+        "correct": true,
+        "latency_ms": 1.1823177337646484,
+        "category": "boundary"
+      }
+    ]
+  },
+  "llm": {
+    "method": "llm",
+    "accuracy": 0.9230769230769231,
+    "correct": 24,
+    "total": 26,
+    "avg_latency_ms": 2490.3400036004873,
+    "results": [
+      {
+        "message": "你好啊，今天怎么样？",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 4904.993295669556,
+        "reason": "用户消息为简单的问候和日常交流。",
+        "category": "greeting"
+      },
+      {
+        "message": "早上好！",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 2406.670570373535,
+        "reason": "用户消息为简单的问候，属于日常交流的范畴。",
+        "category": "greeting"
+      },
+      {
+        "message": "晚安，明天见",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2414.402484893799,
+        "reason": "用户消息为简单的晚安和明天见面的问候，属于日常交流。",
+        "category": "greeting"
+      },
+      {
+        "message": "今天天气真不错",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2401.0488986968994,
+        "reason": "用户消息表达了对天气的简单描述，属于日常交流的内容。",
+        "category": "casual"
+      },
+      {
+        "message": "我想聊聊天",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 2408.4250926971436,
+        "reason": "用户消息为‘我想聊聊天’，表明是日常交流的需求。",
+        "category": "casual"
+      },
+      {
+        "message": "谢谢你帮我",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2383.6593627929688,
+        "reason": "用户表达感谢并请求帮助，通常用于日常交流。",
+        "category": "gratitude"
+      },
+      {
+        "message": "这个想法很有趣",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2411.4952087402344,
+        "reason": "用户表达了对某个想法的兴趣，这通常与闲聊或日常交流相关。",
+        "category": "casual"
+      },
+      {
+        "message": "再见啦",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 2350.4111766815186,
+        "reason": "用户消息为简单的再见，属于日常交流。",
+        "category": "farewell"
+      },
+      {
+        "message": "帮我倒杯水",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2376.854419708252,
+        "reason": "用户请求帮助倒水，属于日常交流的范畴。",
+        "category": "casual_request"
+      },
+      {
+        "message": "算了，没什么特别的",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2433.321714401245,
+        "reason": "用户消息表达了一种放松和不特别的状态，符合日常闲聊的特征。",
+        "category": "casual"
+      },
+      {
+        "message": "请帮我画一个史蒂夫",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2475.0750064849854,
+        "reason": "用户请求画一个史蒂夫，这通常需要创作或绘图任务。",
+        "category": "explicit_task"
+      },
+      {
+        "message": "帮我设计一个logo",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2409.295082092285,
+        "reason": "用户请求设计一个logo，属于明确任务需求的类型。",
+        "category": "explicit_task"
+      },
+      {
+        "message": "能否制作一个宣传海报",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2369.150161743164,
+        "reason": "用户明确表达了制作宣传海报的需求。",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想画一幅画",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2352.348804473877,
+        "reason": "用户明确表达了创作请求，希望画一幅画。",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我创建一个图标",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2339.4110202789307,
+        "reason": "用户请求创建图标，属于明确任务需求。",
+        "category": "explicit_task"
+      },
+      {
+        "message": "请根据这张图片绘制一个类似的",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2441.509962081909,
+        "reason": "用户请求根据图片绘制类似的内容，这通常需要规划和创作方面的技能。",
+        "category": "reference_task"
+      },
+      {
+        "message": "在指定区域绘制一个图形",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2440.6681060791016,
+        "reason": "用户请求在指定区域绘制图形，这通常需要规划和创意的参与。",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想做一个表情包",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2419.0433025360107,
+        "reason": "用户表达了创作请求，需要制作表情包。",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我生成一张图片",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2283.9839458465576,
+        "reason": "用户请求生成一张图片",
+        "category": "explicit_task"
+      },
+      {
+        "message": "把红色改成蓝色",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2421.635866165161,
+        "reason": "用户请求的是一个具体的任务，需要进行颜色的改变操作。",
+        "category": "modification_task"
+      },
+      {
+        "message": "重新调整一下尺寸",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": false,
+        "latency_ms": 2337.5258445739746,
+        "reason": "用户请求调整尺寸，这通常与日常交流和闲聊相关。",
+        "category": "modification_task"
+      },
+      {
+        "message": "在这个基础上添加一些装饰",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2537.9037857055664,
+        "reason": "用户消息中包含明确的创作请求，即‘在这个基础上添加一些装饰’，这表明这是一个需要规划和创意的任务需求。",
+        "category": "reference_task"
+      },
+      {
+        "message": "你好，能帮我看看这个吗",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2316.997528076172,
+        "reason": "用户请求帮助看东西，属于日常交流。",
+        "category": "boundary"
+      },
+      {
+        "message": "我有个想法",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2333.5559368133545,
+        "reason": "用户表达了一种想法，通常与日常交流相关。",
+        "category": "boundary"
+      },
+      {
+        "message": "帮忙看一下",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2371.2894916534424,
+        "reason": "用户消息简短，没有明确的意图表达。",
+        "category": "boundary"
+      },
+      {
+        "message": "帮我...",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": false,
+        "latency_ms": 2408.1640243530273,
+        "reason": "用户消息以'帮我...'开头，通常表示需要帮助或询问信息，属于日常交流的范畴。",
+        "category": "boundary"
+      }
+    ]
+  },
+  "hybrid": {
+    "method": "hybrid_ml_llm",
+    "accuracy": 0.9615384615384616,
+    "correct": 25,
+    "total": 26,
+    "avg_latency_ms": 548.1414886621328,
+    "method_distribution": {
+      "ml_high": 20,
+      "ml_llm_verify": 6
+    },
+    "results": [
+      {
+        "message": "你好啊，今天怎么样？",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.968445683350195,
+        "correct": true,
+        "latency_ms": 2.5606155395507812,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "greeting"
+      },
+      {
+        "message": "早上好！",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9660789411761238,
+        "correct": true,
+        "latency_ms": 3.0007362365722656,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "greeting"
+      },
+      {
+        "message": "晚安，明天见",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9785524558683554,
+        "correct": true,
+        "latency_ms": 1.9927024841308594,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.98",
+        "category": "greeting"
+      },
+      {
+        "message": "今天天气真不错",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9537160527722158,
+        "correct": true,
+        "latency_ms": 1.9998550415039062,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.95",
+        "category": "casual"
+      },
+      {
+        "message": "我想聊聊天",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9621485821519794,
+        "correct": true,
+        "latency_ms": 3.0875205993652344,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.96",
+        "category": "casual"
+      },
+      {
+        "message": "谢谢你帮我",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9441488281855935,
+        "correct": true,
+        "latency_ms": 1.010894775390625,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.94",
+        "category": "gratitude"
+      },
+      {
+        "message": "这个想法很有趣",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9187587744038611,
+        "correct": true,
+        "latency_ms": 2.2788047790527344,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.92",
+        "category": "casual"
+      },
+      {
+        "message": "再见啦",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9697987470853321,
+        "correct": true,
+        "latency_ms": 1.9960403442382812,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "farewell"
+      },
+      {
+        "message": "帮我倒杯水",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2330.0254344940186,
+        "method": "ml_llm_verify",
+        "reason": "ML(0.64)→LLM(0.90) 用户请求帮助倒水，属于日常交流的范畴。",
+        "category": "casual_request"
+      },
+      {
+        "message": "算了，没什么特别的",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2497.206687927246,
+        "method": "ml_llm_verify",
+        "reason": "ML(0.64)→LLM(0.90) 用户消息表达了一种放松和不特别的状态，符合日常闲聊的特征。",
+        "category": "casual"
+      },
+      {
+        "message": "请帮我画一个史蒂夫",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.982701075790645,
+        "correct": true,
+        "latency_ms": 1.6448497772216797,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.98",
+        "category": "explicit_task"
+      },
+      {
+        "message": "帮我设计一个logo",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9736702078832665,
+        "correct": true,
+        "latency_ms": 0.9937286376953125,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "explicit_task"
+      },
+      {
+        "message": "能否制作一个宣传海报",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9586200913683136,
+        "correct": true,
+        "latency_ms": 0.99945068359375,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.96",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想画一幅画",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9412630873175816,
+        "correct": true,
+        "latency_ms": 1.0001659393310547,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.94",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我创建一个图标",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9667305784763451,
+        "correct": true,
+        "latency_ms": 1.001596450805664,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "explicit_task"
+      },
+      {
+        "message": "请根据这张图片绘制一个类似的",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9733483971458711,
+        "correct": true,
+        "latency_ms": 1.1742115020751953,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "reference_task"
+      },
+      {
+        "message": "在指定区域绘制一个图形",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9625820636257638,
+        "correct": true,
+        "latency_ms": 1.012563705444336,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.96",
+        "category": "explicit_task"
+      },
+      {
+        "message": "我想做一个表情包",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9313447555400188,
+        "correct": true,
+        "latency_ms": 0.9989738464355469,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.93",
+        "category": "implicit_task"
+      },
+      {
+        "message": "帮我生成一张图片",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9667305784763451,
+        "correct": true,
+        "latency_ms": 0.0,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "explicit_task"
+      },
+      {
+        "message": "把红色改成蓝色",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9264592220112396,
+        "correct": true,
+        "latency_ms": 1.169443130493164,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.93",
+        "category": "modification_task"
+      },
+      {
+        "message": "重新调整一下尺寸",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9502195911836742,
+        "correct": true,
+        "latency_ms": 1.020193099975586,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.95",
+        "category": "modification_task"
+      },
+      {
+        "message": "在这个基础上添加一些装饰",
+        "expected": "planning",
+        "predicted": "planning",
+        "confidence": 0.9663665718197703,
+        "correct": true,
+        "latency_ms": 0.9973049163818359,
+        "method": "ml_high",
+        "reason": "ML 高置信度: 0.97",
+        "category": "reference_task"
+      },
+      {
+        "message": "你好，能帮我看看这个吗",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2288.815975189209,
+        "method": "ml_llm_verify",
+        "reason": "ML(0.58)→LLM(0.90) 用户请求帮助看东西，属于日常交流的范畴。",
+        "category": "boundary"
+      },
+      {
+        "message": "我有个想法",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": true,
+        "latency_ms": 2291.7962074279785,
+        "method": "ml_llm_verify",
+        "reason": "ML(0.59)→LLM(0.90) 用户表达了一种想法，通常与日常交流相关。",
+        "category": "boundary"
+      },
+      {
+        "message": "帮忙看一下",
+        "expected": "daily",
+        "predicted": "daily",
+        "confidence": 0.95,
+        "correct": true,
+        "latency_ms": 2362.3735904693604,
+        "method": "ml_llm_verify",
+        "reason": "ML(0.59)→LLM(0.95) 用户消息简短，没有明确的意图表达。",
+        "category": "boundary"
+      },
+      {
+        "message": "帮我...",
+        "expected": "planning",
+        "predicted": "daily",
+        "confidence": 0.9,
+        "correct": false,
+        "latency_ms": 2451.521158218384,
+        "method": "ml_llm_verify",
+        "reason": "ML(0.64)→LLM(0.90) 用户消息以'帮我...'开头，表明需要帮助或询问信息，符合闲聊、问候、日常交流、轻松对话的模式。",
+        "category": "boundary"
+      }
+    ]
+  }
+}

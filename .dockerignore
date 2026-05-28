@@ -1,0 +1,52 @@
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+.pytest_cache
+
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.*
+.env_local
+
+# Tests
+tests/
+*.test.py
+*.spec.py
+
+# Logs
+*.log
+logs/
+
+# Data (keep data/ structure but ignore contents)
+data/**
+!data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+!requirements.txt
+
+# Node (frontend build dependencies handled in frontend dir)
+node_modules/
+npm-debug.log

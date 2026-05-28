@@ -1,0 +1,313 @@
+{
+  "session_id": "a09d170f-d635-414b-b483-946b5a20a003",
+  "brief": {
+    "id": "e5821924-6c28-439a-865d-24c5d6caca1b",
+    "goal": "product",
+    "style": "活泼",
+    "keywords": [
+      "新品测试",
+      "用户体验"
+    ],
+    "must_include": [
+      "产品核心功能",
+      "使用场景演示"
+    ],
+    "image_style": "摄影实拍",
+    "need_video": true,
+    "need_voiceover": false,
+    "need_text": true,
+    "need_images": true,
+    "need_bgm": true,
+    "bgm_preference": "轻快流行",
+    "target_audience": "18-35岁注重生活品质的年轻消费者",
+    "reference_materials": [],
+    "raw_input": "测试一下",
+    "extracted_product_info": {},
+    "created_at": "2026-05-04T00:06:23.522489"
+  },
+  "current_plan": {
+    "plan_id": "4cafb376-24fb-48bb-8bfc-0071285ca577",
+    "brief_id": "e5821924-6c28-439a-865d-24c5d6caca1b",
+    "title": "🤫偷偷惊艳！这款神仙新品到底把「体验感」玩明白了？✨",
+    "text_sections": [
+      {
+        "section_id": "sec_08468eca",
+        "section_type": "headline",
+        "content": "",
+        "content_words": 32,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_bf20f7e6",
+        "section_type": "text",
+        "content": "",
+        "content_words": 138,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_8e3204bc",
+        "section_type": "text",
+        "content": "",
+        "content_words": 142,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_6b6464a1",
+        "section_type": "hashtag",
+        "content": "",
+        "content_words": 45,
+        "priority": 2,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_d6bf1adf",
+        "section_type": "cta",
+        "content": "",
+        "content_words": 48,
+        "priority": 3,
+        "is_optional": false
+      }
+    ],
+    "image_plan": {
+      "style": "自然光线下的真实场景摄影，注重产品质感与动态使用状态的捕捉",
+      "elements": [
+        "产品主体特写（突出核心功能部件）",
+        "用户在实际场景中操作产品的动作",
+        "产品功能可视化呈现（如数据界面/效果对比）",
+        "生活化场景道具搭配（办公/户外/家居等）",
+        "光影细节强化产品材质与工艺"
+      ],
+      "count": 5,
+      "aspect_ratio": "1:1",
+      "color_scheme": "自然中性色调为主，局部点缀产品标志性色彩",
+      "reference_image_ids": []
+    },
+    "video_plan": {
+      "duration": 30,
+      "scenes": [
+        {
+          "scene_id": "场景1",
+          "description": "产品核心功能展示",
+          "duration": 15,
+          "visual_prompt": "动态3D旋转的产品模型，周围浮现发光的功能图标（如速度表/齿轮/数据流），背景为渐变色科技感网格，关键功能点弹出半透明信息框"
+        },
+        {
+          "scene_id": "场景2",
+          "description": "多场景使用演示",
+          "duration": 15,
+          "visual_prompt": "快速切换的实景镜头：办公桌前单手操作产品、咖啡厅桌面放置特写、通勤地铁中屏幕显示进度条，每个场景加入轻快弹跳的交互光效"
+        }
+      ],
+      "voiceover": "「一键启动！智能响应提速300%～办公/居家/出行全场景适配，让复杂操作变成指尖游戏！」",
+      "voice_type": "年轻活力女声",
+      "style": "活力科技风"
+    },
+    "audio_plan": null,
+    "estimated_duration": 78,
+    "version": 1,
+    "metadata": {}
+  },
+  "current_version": 1,
+  "items": [],
+  "status": "planning",
+  "created_at": "2026-05-04T00:07:11.236833",
+  "updated_at": "2026-05-04T00:07:11.236833",
+  "versions": [
+    {
+      "version_id": "a09d170f-d635-414b-b483-946b5a20a003_v1",
+      "version_number": 1,
+      "session_id": "a09d170f-d635-414b-b483-946b5a20a003",
+      "plan_snapshot": {
+        "plan_id": "4cafb376-24fb-48bb-8bfc-0071285ca577",
+        "brief_id": "e5821924-6c28-439a-865d-24c5d6caca1b",
+        "title": "🤫偷偷惊艳！这款神仙新品到底把「体验感」玩明白了？✨",
+        "text_sections": [
+          {
+            "section_id": "sec_08468eca",
+            "section_type": "headline",
+            "content": "",
+            "content_words": 32,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_bf20f7e6",
+            "section_type": "text",
+            "content": "",
+            "content_words": 138,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_8e3204bc",
+            "section_type": "text",
+            "content": "",
+            "content_words": 142,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_6b6464a1",
+            "section_type": "hashtag",
+            "content": "",
+            "content_words": 45,
+            "priority": 2,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_d6bf1adf",
+            "section_type": "cta",
+            "content": "",
+            "content_words": 48,
+            "priority": 3,
+            "is_optional": false
+          }
+        ],
+        "image_plan": {
+          "style": "自然光线下的真实场景摄影，注重产品质感与动态使用状态的捕捉",
+          "elements": [
+            "产品主体特写（突出核心功能部件）",
+            "用户在实际场景中操作产品的动作",
+            "产品功能可视化呈现（如数据界面/效果对比）",
+            "生活化场景道具搭配（办公/户外/家居等）",
+            "光影细节强化产品材质与工艺"
+          ],
+          "count": 5,
+          "aspect_ratio": "1:1",
+          "color_scheme": "自然中性色调为主，局部点缀产品标志性色彩",
+          "reference_image_ids": []
+        },
+        "video_plan": {
+          "duration": 30,
+          "scenes": [
+            {
+              "scene_id": "场景1",
+              "description": "产品核心功能展示",
+              "duration": 15,
+              "visual_prompt": "动态3D旋转的产品模型，周围浮现发光的功能图标（如速度表/齿轮/数据流），背景为渐变色科技感网格，关键功能点弹出半透明信息框"
+            },
+            {
+              "scene_id": "场景2",
+              "description": "多场景使用演示",
+              "duration": 15,
+              "visual_prompt": "快速切换的实景镜头：办公桌前单手操作产品、咖啡厅桌面放置特写、通勤地铁中屏幕显示进度条，每个场景加入轻快弹跳的交互光效"
+            }
+          ],
+          "voiceover": "「一键启动！智能响应提速300%～办公/居家/出行全场景适配，让复杂操作变成指尖游戏！」",
+          "voice_type": "年轻活力女声",
+          "style": "活力科技风"
+        },
+        "audio_plan": null,
+        "estimated_duration": 78,
+        "version": 1,
+        "metadata": {}
+      },
+      "items_snapshot": [],
+      "change_summary": "初始版本",
+      "created_by": "orchestrator",
+      "created_at": "2026-05-04T00:07:11.236833",
+      "metadata": {}
+    }
+  ],
+  "metadata": {},
+  "messages": [
+    {
+      "message_id": "51e01651-f345-41eb-b14b-0adbd720aeeb",
+      "role": "assistant",
+      "content": "这是为你生成的内容方案，请确认：",
+      "timestamp": "2026-05-04T00:07:11.236833",
+      "metadata": {
+        "message_type": "plan",
+        "intent_type": "plan_confirmation",
+        "plan_data": {
+          "plan_id": "4cafb376-24fb-48bb-8bfc-0071285ca577",
+          "brief_id": "e5821924-6c28-439a-865d-24c5d6caca1b",
+          "title": "🤫偷偷惊艳！这款神仙新品到底把「体验感」玩明白了？✨",
+          "text_sections": [
+            {
+              "section_id": "sec_08468eca",
+              "section_type": "headline",
+              "content": "",
+              "content_words": 32,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_bf20f7e6",
+              "section_type": "text",
+              "content": "",
+              "content_words": 138,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_8e3204bc",
+              "section_type": "text",
+              "content": "",
+              "content_words": 142,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_6b6464a1",
+              "section_type": "hashtag",
+              "content": "",
+              "content_words": 45,
+              "priority": 2,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_d6bf1adf",
+              "section_type": "cta",
+              "content": "",
+              "content_words": 48,
+              "priority": 3,
+              "is_optional": false
+            }
+          ],
+          "image_plan": {
+            "style": "自然光线下的真实场景摄影，注重产品质感与动态使用状态的捕捉",
+            "elements": [
+              "产品主体特写（突出核心功能部件）",
+              "用户在实际场景中操作产品的动作",
+              "产品功能可视化呈现（如数据界面/效果对比）",
+              "生活化场景道具搭配（办公/户外/家居等）",
+              "光影细节强化产品材质与工艺"
+            ],
+            "count": 5,
+            "aspect_ratio": "1:1",
+            "color_scheme": "自然中性色调为主，局部点缀产品标志性色彩",
+            "reference_image_ids": []
+          },
+          "video_plan": {
+            "duration": 30,
+            "scenes": [
+              {
+                "scene_id": "场景1",
+                "description": "产品核心功能展示",
+                "duration": 15,
+                "visual_prompt": "动态3D旋转的产品模型，周围浮现发光的功能图标（如速度表/齿轮/数据流），背景为渐变色科技感网格，关键功能点弹出半透明信息框"
+              },
+              {
+                "scene_id": "场景2",
+                "description": "多场景使用演示",
+                "duration": 15,
+                "visual_prompt": "快速切换的实景镜头：办公桌前单手操作产品、咖啡厅桌面放置特写、通勤地铁中屏幕显示进度条，每个场景加入轻快弹跳的交互光效"
+              }
+            ],
+            "voiceover": "「一键启动！智能响应提速300%～办公/居家/出行全场景适配，让复杂操作变成指尖游戏！」",
+            "voice_type": "年轻活力女声",
+            "style": "活力科技风"
+          },
+          "audio_plan": null,
+          "estimated_duration": 78,
+          "version": 1,
+          "metadata": {}
+        }
+      }
+    }
+  ]
+}

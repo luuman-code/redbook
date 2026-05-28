@@ -1,0 +1,79 @@
+name: canvas_draw
+description: 在画板绘制 SVG 路径图形
+version: 1.0
+agent_type: canvas
+
+# 第二级披露概要
+catalog_instruction: |
+  在画板上绘制 SVG 路径图形，包括圆形、矩形、直线、曲线等。
+  支持多路径一次性绘制完整图案。
+
+# 完整技能指令（L3）
+prompt: |
+  # canvas_draw 技能指令
+
+  ## 工具说明
+
+  ### canvas_draw
+  使用 SVG path 命令绘制自定义路径。
+  - operation: 固定为 "brush"
+  - params.path_data: SVG path 命令字符串，支持 M/L/Q/C/A/Z 命令，多路径用空格分隔
+  - params.color: 描边颜色（HEX值或颜色名）
+  - params.stroke_width: 线条粗细（像素）
+  - params.fill_color: 填充颜色（可选，封闭路径有效）
+  - params.drawing_session_id: 绘图会话ID（可选，用于关联同一图案的多次绘制）
+
+  ### canvas_shape
+  绘制预定义形状。
+  - shape_type: 形状类型（必选），可选值：star/heart/triangle/arrow/diamond/hexagon/pentagon/cross/circle/ellipse/rect
+  - color: 描边颜色
+  - stroke_width: 线条粗细
+  - fill_color: 填充颜色（可选）
+  - scale: 图形大小比例（0.0-1.0），默认1.0
+  - offset_x: 横向偏移比例（-0.5到0.5），默认0
+  - offset_y: 纵向偏移比例（-0.5到0.5），默认0
+
+  ### canvas_transform
+  对已有元素进行变换操作。
+  - operation: 变换操作类型（必选），可选值：rotate/flip/scale/duplicate/bring_to_front/send_to_back/move_up/move_down
+  - element_id: 目标元素ID（必选）
+  - degrees: 旋转角度（用于rotate，可选值：90/180/270）
+  - flip_direction: 镜像方向（用于flip，可选值：horizontal/vertical）
+  - scale_factor: 缩放比例（用于scale，如1.5表示放大到1.5倍）
+  - offset_x: 横向偏移像素（用于duplicate/move_up/move_down）
+  - offset_y: 纵向偏移像素（用于duplicate/move_up/move_down）
+
+  ### canvas_undo
+  回撤上一部绘制操作。
+  无参数。
+
+  ### canvas_snapshot
+  获取画布视觉快照，验证绘制效果。
+  - thumbnail_size: 缩略图尺寸（可选：small/medium/large，默认medium）
+  - include_elements: 是否包含元素详情（默认true）
+  - upload_to_oss: 是否上传到OSS生成公开URL（默认true）
+
+  ### canvas_understand
+  理解当前画布状态和元素信息。
+  无参数。
+
+  ## 坐标系统
+  - y=0 在画布上方
+  - 路径坐标基于选择区域边界（0 到 width/height）
+  - 可用空格分隔多路径，一次性绘制完整图案
+
+# 允许的工具列表（安全机制）
+allowed_tools:
+  - canvas_draw
+  - canvas_shape
+  - canvas_transform
+  - canvas_undo
+  - canvas_snapshot
+  - canvas_understand
+  - use_skill
+  - preview_skill
+  - deactivate_skill
+
+# 技能依赖（仅文档）
+dependencies:
+  - canvas_understand

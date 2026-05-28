@@ -1,0 +1,105 @@
+name: canvas_planning
+description: 规划模式专用 - 介绍工作模式下的工具及用途
+version: 1.0
+agent_type: canvas
+
+# 第二级披露概要
+catalog_instruction: |
+  介绍工作模式下可用的所有工具及其功能，帮助制定更合理的执行计划。
+  【重要】此技能仅用于规划阶段，让 Agent 了解可用的工具以便制定可行计划。
+
+# 完整技能指令（L3）
+prompt: |
+  # canvas_planning 技能指令
+
+  ## 技能用途
+
+  本技能用于在**规划模式**下介绍**工作模式**中可用的工具及其功能。
+  通过加载本技能，规划 Agent 能够：
+  1. 了解工作模式有哪些可用工具
+  2. 理解每个工具的功能和适用场景
+  3. 制定更具体、可执行的计划步骤
+
+  ## 工作模式可用工具一览
+
+  ### 1. canvas_understand（理解画布状态）
+  - **功能**：理解当前画板状态和元素信息
+  - **用途**：在任何操作前获取画布当前状态，了解已有哪些元素
+  - **参数**：无
+
+  ### 2. canvas_draw（绘制 SVG 路径图形）
+  - **功能**：使用 SVG path 命令绘制自定义路径图形
+  - **用途**：绘制任意形状的图案、线条、曲线等
+  - **参数**：
+    - path_data: SVG path 命令字符串（支持 M/L/Q/C/A/Z）
+    - color: 描边颜色
+    - stroke_width: 线条粗细
+    - fill_color: 填充颜色（可选）
+    - drawing_session_id: 绘图会话ID（关联同一图案的多次绘制）
+
+  ### 3. canvas_shape（绘制预定义形状）
+  - **功能**：绘制预定义形状（星形、心形、三角形等）
+  - **用途**：快速生成标准几何形状
+  - **参数**：
+    - shape_type: 形状类型（star/heart/triangle/arrow/diamond/hexagon/pentagon/cross/circle/ellipse/rect）
+    - color: 描边颜色
+    - stroke_width: 线条粗细
+    - fill_color: 填充颜色（可选）
+    - scale: 图形大小比例（0.0-1.0）
+    - offset_x/offset_y: 位置偏移比例
+
+  ### 4. canvas_transform（变换操作）
+  - **功能**：对已有元素进行变换（旋转、镜像、缩放、复制等）
+  - **用途**：调整元素的大小、位置、方向
+  - **参数**：
+    - operation: 变换类型（rotate/flip/scale/duplicate/bring_to_front/send_to_back/move_up/move_down）
+    - element_id: 目标元素ID
+    - degrees: 旋转角度（90/180/270）
+    - flip_direction: 镜像方向（horizontal/vertical）
+    - scale_factor: 缩放比例
+    - offset_x/offset_y: 偏移像素
+
+  ### 5. canvas_edit（修改选中内容）
+  - **功能**：修改用户已选中的内容（文本、图形等）
+  - **用途**：响应用户的编辑需求
+  - **参数**：
+    - selection_content: 选中区域的内容描述
+    - edit_instruction: 修改指令（如新文本内容）
+
+  ### 6. canvas_global_edit（全局编辑）
+  - **功能**：对整个画布或未选中区域进行编辑
+  - **用途**：用户未选择时的全局修改
+  - **参数**：
+    - instruction: 修改指令
+
+  ### 7. canvas_undo（回撤）
+  - **功能**：回撤上一部绘制操作
+  - **用途**：撤销错误的绘制操作
+  - **参数**：无
+
+  ### 8. canvas_snapshot（获取视觉快照）
+  - **功能**：获取画布的视觉快照（截图），自动上传到 OSS
+  - **用途**：验证绘制效果、查看画布渲染结果
+  - **返回**：
+    - visual_snapshot_url: OSS 公开 URL
+    - selection_info: 选择区域信息
+    - elements_summary: 元素摘要
+
+  ## 规划建议
+
+  1. **计划要具体**：每个步骤应说明使用哪个工具、做什么操作、达到什么效果
+  2. **考虑依赖关系**：某些操作可能需要先调用 canvas_understand 了解状态
+  3. **包含验证步骤**：复杂绘制后建议包含 canvas_snapshot 验证效果
+  4. **预留调整空间**：计划应允许根据实际情况调整
+
+  ## 坐标系说明
+
+  - y=0 在画布上方
+  - 路径坐标基于选择区域边界（0 到 width/height）
+  - 可用空格分隔多路径一次性绘制完整图案
+
+# 允许的工具列表（此技能在规划模式下使用，不需要直接调用工具）
+allowed_tools: []
+
+# 技能依赖（无依赖）
+dependencies: []

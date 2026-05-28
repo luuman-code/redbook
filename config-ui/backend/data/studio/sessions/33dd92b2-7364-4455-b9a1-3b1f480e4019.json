@@ -1,0 +1,178 @@
+{
+  "session_id": "33dd92b2-7364-4455-b9a1-3b1f480e4019",
+  "brief": {
+    "id": "258501d2-d6eb-4460-877e-930fe8ca114a",
+    "goal": "lifestyle",
+    "style": "温暖治愈",
+    "keywords": [
+      "第一次尝试",
+      "种多肉",
+      "适度放手",
+      "成长感悟",
+      "生活哲理"
+    ],
+    "must_include": [
+      "主人公第一次种多肉信心满满",
+      "因太勤快浇水导致多肉死亡",
+      "领悟到多肉需要'放手'而非'过度关心'",
+      "引申出对人或事适度放手的感悟",
+      "正能量、积极、完整的故事情节"
+    ],
+    "image_style": "摄影实拍",
+    "need_video": false,
+    "need_voiceover": false,
+    "need_text": true,
+    "need_images": true,
+    "need_bgm": false,
+    "bgm_preference": "",
+    "target_audience": "喜欢生活感悟、植物养护、情感治愈的年轻群体",
+    "reference_materials": [],
+    "raw_input": "请生成一个关于\"第一次尝试做某事\"的生活趣事小故事。故事内容：主人公（我）第一次尝试在家种多肉植物，一开始信心满满，结果因为太勤快浇水反而把多肉养死了。后来发现多肉需要的是\"放手\"而不是\"过度关心\"。从这个经历中感悟到：有时候对人对事也是一样，适度放手反而能让对方更好成长。要求正能量、积极、成长向，温暖治愈，有完整故事结构。请将文案渲染到模板图片上。",
+    "extracted_product_info": {},
+    "template_image_url": "https://redbook-materials.oss-cn-shenzhen.aliyuncs.com/44c03bef14934e9b.webp",
+    "template_analysis": [],
+    "created_at": "2026-05-14T16:24:26.406820"
+  },
+  "current_plan": {
+    "plan_id": "68554988-3852-4b64-be57-5ae653cc8203",
+    "brief_id": "258501d2-d6eb-4460-877e-930fe8ca114a",
+    "title": "第一次种多肉就翻车？原来最好的爱，是学会“适度放手”🌱",
+    "text_sections": [
+      {
+        "section_id": "sec_1cbc4977",
+        "section_type": "headline",
+        "content": "",
+        "content_words": 40,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_9d4be3eb",
+        "section_type": "text",
+        "content": "",
+        "content_words": 150,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_da93e418",
+        "section_type": "text",
+        "content": "",
+        "content_words": 150,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_bbebb5d1",
+        "section_type": "text",
+        "content": "",
+        "content_words": 50,
+        "priority": 2,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_d540cf30",
+        "section_type": "hashtag",
+        "content": "",
+        "content_words": 30,
+        "priority": 2,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_b72e90f4",
+        "section_type": "cta",
+        "content": "",
+        "content_words": 40,
+        "priority": 1,
+        "is_optional": false
+      }
+    ],
+    "image_plan": {
+      "style": "温馨治愈系生活摄影实拍，自然光感，注重人物手部动作与植物细节，带有生活纪实与情感叙事氛围",
+      "elements": [
+        "主人公双手小心翼翼将多肉移入陶盆，桌面整齐摆放园艺工具与土壤，表情自信期待",
+        "手持小喷壶频繁给多肉浇水，水珠晶莹滴落，旁边日历翻动显示仅过两三天，体现过度关心",
+        "多肉叶片逐渐干瘪发黑，主人公托腮凝视花盆，光线微暗柔和，呈现失落与内心反思",
+        "阳光洒落窗台，一盆健康饱满的新多肉静静生长，旁边留白处放置象征'适度放手'的干燥花束或收起的浇水壶，画面明亮通透传递成长感悟"
+      ],
+      "count": 4,
+      "aspect_ratio": "4:3",
+      "color_scheme": "温暖治愈的自然色调，以陶土红、植物绿与阳光暖黄为主，光影柔和过渡，整体明亮通透富有呼吸感",
+      "reference_image_ids": []
+    },
+    "video_plan": null,
+    "audio_plan": null,
+    "estimated_duration": 72,
+    "version": 1,
+    "metadata": {}
+  },
+  "current_version": 1,
+  "items": [],
+  "status": "created",
+  "created_at": "2026-05-14T15:55:21.373369",
+  "updated_at": "2026-05-14T15:55:21.373369",
+  "versions": [],
+  "metadata": {
+    "preview_image_url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/7d/47/20260514/888c8bb7/3ed857b2-9bbe-4d41-9c57-5847654be210.png?Expires=1779352816&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=cvUcWMWzGTgtGuWff3w267xbZ0k%3D",
+    "preview_title": "谁懂啊！这种慢节奏生活太香了☕️",
+    "preview_text_sections": [
+      {
+        "section_id": "preview_ecefa2a4",
+        "section_type": "title",
+        "content": "谁懂啊！这种慢节奏生活太香了☕️",
+        "content_words": 16
+      },
+      {
+        "section_id": "preview_cd8b85b4",
+        "section_type": "headline",
+        "content": "☀️ 被阳光偏爱的早晨",
+        "content_words": 11
+      },
+      {
+        "section_id": "preview_354e0712",
+        "section_type": "text",
+        "content": "窗帘缝隙漏进来的光斑，像给木地板铺了一层碎金。伸个大大的懒腰，连空气里都飘着刚晒过被子的蓬松味道。今天不赶任何DDL，只负责把心情一键切换到“慵懒模式”！",
+        "content_words": 77
+      },
+      {
+        "section_id": "preview_a69b704d",
+        "section_type": "headline",
+        "content": "☕️ 一杯咖啡的充电时间",
+        "content_words": 12
+      },
+      {
+        "section_id": "preview_f554b0ba",
+        "section_type": "text",
+        "content": "手冲壶里咕噜咕噜冒着小泡，焦糖色的液体在杯底慢慢打转。随便抓本旧杂志窝进软乎乎的沙发，连翻页的沙沙声都成了专属白噪音。原来名正言顺的发呆，才是给大脑最好的SPA呀～",
+        "content_words": 82
+      },
+      {
+        "section_id": "preview_9d43592e",
+        "section_type": "headline",
+        "content": "🌿 把琐碎过成小确幸",
+        "content_words": 10
+      },
+      {
+        "section_id": "preview_f97b785a",
+        "section_type": "text",
+        "content": "傍晚去街角花店抱回一束洋桔梗，随手插进玻璃瓶瞬间点亮了餐桌。跟着轻快的歌单在厨房边洗碗边扭两下，连泡沫都变得闪闪发光。生活哪有那么多标准答案，自己开心就是满分答案！",
+        "content_words": 82
+      },
+      {
+        "section_id": "preview_034356e3",
+        "section_type": "hashtag",
+        "content": "#周末日常 #治愈系生活 #我的慢生活日记 #把日子过成诗 #生活碎片",
+        "content_words": 35
+      }
+    ]
+  },
+  "messages": [
+    {
+      "message_id": "313891bc-5c15-4811-94c3-38d492d74752",
+      "role": "user",
+      "content": "我需要你编造一个生活趣事，要求正能量的、积极的、成长向的，先将我上传的文案模板图片中的文案内容移除，将生成的生活趣事文案内容替换到文案模板图片上面，生成文案模板预览。",
+      "timestamp": "2026-05-14T16:05:19.347355",
+      "metadata": {}
+    }
+  ]
+}

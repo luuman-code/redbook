@@ -1,0 +1,58 @@
+name: canvas_undo
+description: 回撤绘制（橡皮擦）
+version: 1.1
+agent_type: canvas
+
+# 第二级披露概要
+catalog_instruction: |
+  回撤之前的绘制操作。
+  支持两种模式：
+  1. 回撤最近一次绘制
+  2. 按 drawing_session_id 回撤整个图案的所有绘制
+
+# 完整技能指令（L3）
+prompt: |
+  # canvas_undo 技能指令
+
+  ## 核心机制 - 模拟人类绘画
+  - 人类绘画：绘制正确线条保留，错误线条用橡皮擦擦除
+  - Agent 回撤：正确绘制存入存储区，错误绘制通过此工具移除
+
+  ## 使用场景
+  - 绘制后发现颜色不对（如应该绿色但显示灰色）
+  - 绘制后发现位置偏移
+  - 绘制后发现形状不符合预期
+  - 需要重新绘制但不想保留之前的结果
+  - 需要回撤整个图案（如整个小猪佩奇）
+
+  ## 支持两种回撤模式
+
+  ### 模式1：回撤最近一次绘制（默认）
+  ```
+  canvas_undo(reason="颜色不对")
+  ```
+  - reason 参数可选，用于说明回撤原因
+
+  ### 模式2：按 drawing_session_id 回撤整个图案
+  ```
+  canvas_undo(reason="需要重新画", drawing_session_id="peppa_pig_001")
+  ```
+  - drawing_session_id：图案会话ID，从 canvas_draw 结果中获取
+  - 会回撤该图案的所有绘制操作
+
+  ## 重要说明
+  - 回撤后会删除对应的元素
+  - 可以多次回撤，回撤所有 Agent 绘制的元素
+  - 回撤后画布状态会恢复到之前的样子
+
+# 允许的工具列表
+allowed_tools:
+  - canvas_undo
+  - canvas_draw
+  - canvas_understand
+  - use_skill
+  - preview_skill
+  - deactivate_skill
+
+# 技能依赖（无依赖，可随时使用）
+dependencies: []

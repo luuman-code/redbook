@@ -1,0 +1,65 @@
+{
+  "plan_id": "94fae3fc-3612-41ec-aae2-701912ab4f5d",
+  "brief_id": "92cc23e8-2e95-4fe1-a6cc-12579cb0027f",
+  "title": "那天在海边，我突然想通了一件小事🌊",
+  "text_sections": [
+    {
+      "section_id": "sec_b15034d6",
+      "section_type": "headline",
+      "content": "",
+      "content_words": 16,
+      "priority": 1,
+      "is_optional": false
+    },
+    {
+      "section_id": "sec_ef7426b1",
+      "section_type": "text",
+      "content": "",
+      "content_words": 190,
+      "priority": 1,
+      "is_optional": false
+    },
+    {
+      "section_id": "sec_5ba60a3b",
+      "section_type": "text",
+      "content": "",
+      "content_words": 180,
+      "priority": 1,
+      "is_optional": false
+    },
+    {
+      "section_id": "sec_d25d15e4",
+      "section_type": "cta",
+      "content": "",
+      "content_words": 32,
+      "priority": 2,
+      "is_optional": false
+    },
+    {
+      "section_id": "sec_e5e4bfb5",
+      "section_type": "hashtag",
+      "content": "",
+      "content_words": 18,
+      "priority": 3,
+      "is_optional": false
+    }
+  ],
+  "image_plan": {
+    "style": "摄影实拍风格，自然纪实感，注重光影层次与留白构图，适合文字排版",
+    "elements": [
+      "海边日落实景（天空与海面交界处）",
+      "大面积柔和留白区域（用于放置成长向文案）",
+      "象征积极尝试的小物件（如沙滩上的运动鞋、翻开的计划本或冲浪板）",
+      "低对比度背景与视觉引导线"
+    ],
+    "count": 4,
+    "aspect_ratio": "16:9",
+    "color_scheme": "暖橘金与淡紫渐变色调，整体低饱和度，背景适度压暗以突出文案可读性",
+    "reference_image_ids": []
+  },
+  "video_plan": null,
+  "audio_plan": null,
+  "estimated_duration": 67,
+  "version": 1,
+  "metadata": {}
+}

@@ -1,0 +1,56 @@
+name: canvas_edit
+description: 修改选中/框选内容
+version: 1.0
+agent_type: canvas
+
+# 第二级披露概要
+catalog_instruction: |
+  修改画板上已选中的内容，包括文本修改、图形调整等。
+  需要先使用 canvas_understand 获取当前状态。
+
+# 完整技能指令（L3）
+prompt: |
+  # canvas_edit 技能指令
+
+  ## 核心能力
+  使用 canvas_edit 或 canvas_global_edit 工具修改画板内容。
+
+  ## 前置要求
+  在执行编辑前，你需要先调用 use_skill("canvas_understand") 获取当前画板状态，
+  了解要修改的内容的位置和上下文。
+
+  ## canvas_edit 使用条件
+  - 用户框选/选中内容 + 明确描述修改需求
+  - 输入：selection_content + edit_instruction
+  - 规则：只修改用户指定的区域，不要自作主张修改其他
+
+  ## canvas_global_edit 使用条件
+  - 用户未选择 + 明确描述全局修改
+  - 输入：canvas_snapshot + instruction
+  - 规则：只执行用户明确要求的修改
+
+  ## 【输出格式要求 - 必须严格遵守】
+  当执行文本修改时，edit_instruction 参数的值必须直接是要修改成的新文本内容，不要包含任何前缀文字。
+
+  正确格式示例：
+  - edit_instruction 参数值应该是：`这是新文本内容`
+  - edit_instruction 参数值应该是：`今天天气真好`
+
+  错误格式示例（不要这样写）：
+  - 错误：`edit_instruction: "将文本改成这是新文本"` （包含了前缀指令文字）
+  - 错误：`edit_instruction: 将文本改成"内容"` （在内容外又加了引号和前缀）
+
+# 允许的工具列表
+allowed_tools:
+  - canvas_edit
+  - canvas_global_edit
+  - canvas_understand
+  - canvas_draw
+  - canvas_undo
+  - use_skill
+  - preview_skill
+  - deactivate_skill
+
+# 技能依赖
+dependencies:
+  - canvas_understand

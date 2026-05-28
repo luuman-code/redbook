@@ -1,0 +1,209 @@
+{
+  "session_id": "bb15243e-2dc0-4d7c-9abe-c9f166020bad",
+  "brief": {
+    "id": "ee4c2bf1-d083-45ba-8af6-fe9023658a06",
+    "goal": "plant",
+    "style": "活泼",
+    "keywords": [
+      "测试",
+      "种草"
+    ],
+    "must_include": [
+      "测试体验",
+      "真实反馈"
+    ],
+    "image_style": "摄影实拍",
+    "need_video": false,
+    "need_voiceover": false,
+    "need_text": true,
+    "need_images": false,
+    "need_bgm": false,
+    "bgm_preference": "",
+    "target_audience": "对新品/新功能感兴趣的年轻女性用户，关注实用性和真实体验",
+    "reference_materials": [],
+    "raw_input": "测试会话",
+    "extracted_product_info": {},
+    "template_image_url": null,
+    "template_analysis": [],
+    "created_at": "2026-05-10T01:08:35.432792"
+  },
+  "current_plan": {
+    "plan_id": "8d344ac3-97e9-4388-a739-8ec1e740acc8",
+    "brief_id": "ee4c2bf1-d083-45ba-8af6-fe9023658a06",
+    "title": "🌱偷偷测了10款「新手友好」绿植，3棵已挂…但第7棵让我原地封神！",
+    "text_sections": [
+      {
+        "section_id": "sec_5ecfb873",
+        "section_type": "headline",
+        "content": "",
+        "content_words": 12,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_5fbbf985",
+        "section_type": "text",
+        "content": "",
+        "content_words": 280,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_60aadcf1",
+        "section_type": "hashtag",
+        "content": "",
+        "content_words": 4,
+        "priority": 2,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_171536e2",
+        "section_type": "cta",
+        "content": "",
+        "content_words": 25,
+        "priority": 3,
+        "is_optional": false
+      }
+    ],
+    "image_plan": null,
+    "video_plan": null,
+    "audio_plan": null,
+    "estimated_duration": 50,
+    "version": 1,
+    "metadata": {}
+  },
+  "current_version": 1,
+  "items": [],
+  "status": "planning",
+  "created_at": "2026-05-10T01:09:06.921418",
+  "updated_at": "2026-05-10T01:09:06.921418",
+  "versions": [
+    {
+      "version_id": "bb15243e-2dc0-4d7c-9abe-c9f166020bad_v1",
+      "version_number": 1,
+      "session_id": "bb15243e-2dc0-4d7c-9abe-c9f166020bad",
+      "plan_snapshot": {
+        "plan_id": "8d344ac3-97e9-4388-a739-8ec1e740acc8",
+        "brief_id": "ee4c2bf1-d083-45ba-8af6-fe9023658a06",
+        "title": "🌱偷偷测了10款「新手友好」绿植，3棵已挂…但第7棵让我原地封神！",
+        "text_sections": [
+          {
+            "section_id": "sec_5ecfb873",
+            "section_type": "headline",
+            "content": "",
+            "content_words": 12,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_5fbbf985",
+            "section_type": "text",
+            "content": "",
+            "content_words": 280,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_60aadcf1",
+            "section_type": "hashtag",
+            "content": "",
+            "content_words": 4,
+            "priority": 2,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_171536e2",
+            "section_type": "cta",
+            "content": "",
+            "content_words": 25,
+            "priority": 3,
+            "is_optional": false
+          }
+        ],
+        "image_plan": null,
+        "video_plan": null,
+        "audio_plan": null,
+        "estimated_duration": 50,
+        "version": 1,
+        "metadata": {}
+      },
+      "items_snapshot": [],
+      "change_summary": "初始版本",
+      "created_by": "orchestrator",
+      "created_at": "2026-05-10T01:09:06.921418",
+      "metadata": {}
+    }
+  ],
+  "metadata": {},
+  "messages": [
+    {
+      "message_id": "fcad1606-015d-45d0-9343-f19d53752d97",
+      "role": "assistant",
+      "content": "这是为你生成的内容方案，请确认：",
+      "timestamp": "2026-05-10T01:09:06.921418",
+      "metadata": {
+        "message_type": "plan",
+        "intent_type": "plan_confirmation",
+        "plan_data": {
+          "plan_id": "8d344ac3-97e9-4388-a739-8ec1e740acc8",
+          "brief_id": "ee4c2bf1-d083-45ba-8af6-fe9023658a06",
+          "title": "🌱偷偷测了10款「新手友好」绿植，3棵已挂…但第7棵让我原地封神！",
+          "text_sections": [
+            {
+              "section_id": "sec_5ecfb873",
+              "section_type": "headline",
+              "content": "",
+              "content_words": 12,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_5fbbf985",
+              "section_type": "text",
+              "content": "",
+              "content_words": 280,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_60aadcf1",
+              "section_type": "hashtag",
+              "content": "",
+              "content_words": 4,
+              "priority": 2,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_171536e2",
+              "section_type": "cta",
+              "content": "",
+              "content_words": 25,
+              "priority": 3,
+              "is_optional": false
+            }
+          ],
+          "image_plan": null,
+          "video_plan": null,
+          "audio_plan": null,
+          "estimated_duration": 50,
+          "version": 1,
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "message_id": "e2973e46-3d99-40a9-b241-260555933823",
+      "role": "user",
+      "content": "帮我生成一个推广蓝牙耳机的文案",
+      "timestamp": "2026-05-10T01:09:58.290491",
+      "metadata": {}
+    },
+    {
+      "message_id": "737987e2-b1a1-4896-bc7e-142f15aec112",
+      "role": "assistant",
+      "content": "你好！👋 看到你想推广蓝牙耳机，我来帮你打造一个吸睛又实用的小红书文案～  \n\n不过为了更精准地匹配你的产品特点和目标受众，能告诉我更多细节吗？比如：\n\n- 🎯 **产品亮点**：降噪？超长续航？轻巧设计？音质突出？\n- 👥 **目标用户**：学生党？通勤族？运动爱好者？\n- 🎨 **风格偏好**：专业干货型？轻松种草型？治愈系？搞笑反差？\n- 📸 **是否有参考图/模板**？（比如你想要模仿的某篇爆款截图）\n\n如果你暂时没有具体想法，我可以先按「高性价比+通勤场景」的热门方向，为你生成一个通用版方案～  \n你希望我直接开始，还是先补充些信息？ 😊",
+      "timestamp": "2026-05-10T01:10:05.195566",
+      "metadata": {}
+    }
+  ]
+}

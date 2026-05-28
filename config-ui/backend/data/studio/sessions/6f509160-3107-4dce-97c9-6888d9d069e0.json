@@ -1,0 +1,165 @@
+{
+  "session_id": "6f509160-3107-4dce-97c9-6888d9d069e0",
+  "brief": {
+    "id": "fbd35b8a-66a8-45d5-8bac-5267d5917c8b",
+    "goal": "lifestyle",
+    "style": "清新",
+    "keywords": [
+      "诗意生活",
+      "自然光影"
+    ],
+    "must_include": [
+      "自然场景描述",
+      "日常细节捕捉"
+    ],
+    "image_style": "摄影实拍",
+    "need_video": false,
+    "need_voiceover": false,
+    "need_text": true,
+    "need_images": false,
+    "need_bgm": false,
+    "bgm_preference": "轻柔纯音乐",
+    "target_audience": "20-35岁注重生活品质、喜欢自然与文艺内容的年轻人",
+    "reference_materials": [],
+    "raw_input": "请你将标题以及正文内容都改为比较有诗意的感觉，但是语言有比较通俗易懂，整体内容比较有画面感。",
+    "extracted_product_info": {},
+    "template_image_url": "https://redbook-materials.oss-cn-shenzhen.aliyuncs.com/f814f08ce0f049f8.webp",
+    "template_analysis": [],
+    "created_at": "2026-05-14T21:44:14.590242"
+  },
+  "current_plan": {
+    "plan_id": "70ab2cfe-e9f8-4fd5-ab32-c98906918ea6",
+    "brief_id": "fbd35b8a-66a8-45d5-8bac-5267d5917c8b",
+    "title": "把日子过成诗，只需一束穿过窗棂的光",
+    "text_sections": [
+      {
+        "section_id": "sec_6a2a1210",
+        "section_type": "text",
+        "content": "",
+        "content_words": 170,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_9d47e954",
+        "section_type": "text",
+        "content": "",
+        "content_words": 150,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_40a0771b",
+        "section_type": "cta",
+        "content": "",
+        "content_words": 35,
+        "priority": 2,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_857d084d",
+        "section_type": "hashtag",
+        "content": "",
+        "content_words": 25,
+        "priority": 3,
+        "is_optional": false
+      }
+    ],
+    "image_plan": null,
+    "video_plan": null,
+    "audio_plan": null,
+    "estimated_duration": 50,
+    "version": 1,
+    "metadata": {}
+  },
+  "current_version": 1,
+  "items": [],
+  "status": "created",
+  "created_at": "2026-05-14T21:34:20.955997",
+  "updated_at": "2026-05-14T21:34:20.955997",
+  "versions": [],
+  "metadata": {
+    "preview_image_url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/7d/1d/20260514/888c8bb7/d49bf079-b62a-4327-b05d-2aca733fa61f.png?Expires=1779372240&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=P5ijeOcDtAY1zka018yBmp4DM1g%3D",
+    "preview_title": "偷偷把周末调成0.5倍速🎞️",
+    "preview_text_sections": [
+      {
+        "section_id": "preview_2ac1f18c",
+        "section_type": "title",
+        "content": "偷偷把周末调成0.5倍速🎞️",
+        "content_words": 14
+      },
+      {
+        "section_id": "preview_2984f073",
+        "section_type": "headline",
+        "content": "阳光叫醒的早晨 ☀️",
+        "content_words": 10
+      },
+      {
+        "section_id": "preview_7b67c362",
+        "section_type": "text",
+        "content": "关掉闹钟，任由阳光在木地板上跳起轻快的踢踏舞。慢悠悠泡一杯燕麦拿铁，看热气慢慢晕染开整个房间。今天不赶KPI，只赶一场和云朵的慵懒约会。",
+        "content_words": 68
+      },
+      {
+        "section_id": "preview_31ff9bb6",
+        "section_type": "headline",
+        "content": "街角市集的治愈魔法 🛍️",
+        "content_words": 12
+      },
+      {
+        "section_id": "preview_c34b6bc3",
+        "section_type": "text",
+        "content": "提着帆布袋钻进喧闹的菜市场，指尖沾上带着露水的番茄清香。和摊主阿姨笑着唠两句家常，顺手带走一束刚包好的洋桔梗。原来最顶级的松弛感，就藏在这口热腾腾的人间烟火里。",
+        "content_words": 80
+      },
+      {
+        "section_id": "preview_c1b50d28",
+        "section_type": "headline",
+        "content": "夜晚的微醺放映室 🎬",
+        "content_words": 10
+      },
+      {
+        "section_id": "preview_a2490e21",
+        "section_type": "text",
+        "content": "拉上窗帘，让投影仪在白墙上投出老电影的柔光滤镜。整个人陷进软乎乎的毛毯里，手边是切好的水果和半杯梅子酒。把白天的烦恼一键清空，今晚只负责做个快乐的做梦家。",
+        "content_words": 77
+      },
+      {
+        "section_id": "preview_566d8352",
+        "section_type": "hashtag",
+        "content": "#周末慢生活 #我的治愈系日常 #生活碎片收集 #氛围感居家 #打工人回血指南",
+        "content_words": 39
+      }
+    ]
+  },
+  "messages": [
+    {
+      "message_id": "9d3bd96e-3f63-43ae-add1-66845594815e",
+      "role": "user",
+      "content": "我需要你编造一个生活趣事，要求正能量的、积极的、成长向的，先将我上传的文案模板图片中的文案内容移除，将生成的生活趣事文案内容替换到文案模板图片上面，生成文案模板预览。",
+      "timestamp": "2026-05-14T21:34:54.803167",
+      "metadata": {}
+    },
+    {
+      "message_id": "5a6520e1-2b76-45ed-bc43-38ce9863ae76",
+      "role": "assistant",
+      "content": "这是为您生成的文案模板预览，已将您上传的图片中的原文案移除，替换为全新的生活趣事文案 ✨\n\n🖼️ **预览效果**：\n![预览图](https://dashscope-7c2c.oss-accelerate.aliyuncs.com/7d/d0/20260514/888c8bb7/00e5e812-0d5f-46fc-aca2-0ea91197fa47.png?Expires=1779371761&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=mw9JTL1pwDPbPWnHD%2B0dwZSmKiI%3D)\n\n📝 **文案内容**：\n\n**标题**：谁懂啊！这样过日子真的会上瘾\n\n**☕️ 晨间微光，开启满电模式**\n拉开窗帘让阳光铺满木地板，手冲咖啡的香气瞬间填满房间。套上软糯的针织开衫，对着镜子给自己一个大大的微笑，今天又是电量满格的一天！\n\n**🌿 午后漫游，收集生活碎片**\n抱着帆布包去街角花店挑一束洋桔梗，顺便和老板闲聊最近的天气。坐在公园长椅上啃一口刚出炉的可颂，看云朵慢慢散步，时间好像都跟着变慢了。\n\n**🌙 夜晚回血，把焦虑一键清零**\n点上喜欢的木质香薰，窝在沙发里挑一部老电影慢慢看。泡个热水脚再钻进晒过太阳的被窝，所有疲惫都在这一刻被温柔接住啦～\n\n**#治愈系日常 #慢生活指南 #提升幸福感的小事 #周末怎么过 #我的私藏生活碎片**\n\n---\n\n这是一个充满正能量和成长感的日常生活分享，展现了如何从日常小事中找到幸福感。整体风格轻松治愈，配合您上传的温馨图片背景，非常适合小红书平台传播。\n\n请问您对这个预览满意吗？\n- 如果满意，可以告诉我\"确认\"或\"生成\"\n- 如果想调整，可以告诉我具体想要修改哪里（比如标题换一下、内容调整等）\n- 如果想重新生成一版，告诉我\"重新生成\"即可",
+      "timestamp": "2026-05-14T21:39:38.402229",
+      "metadata": {}
+    },
+    {
+      "message_id": "84a41406-4c7f-4f65-b4a0-08644552bc82",
+      "role": "user",
+      "content": "请你将标题以及正文内容都改为比较有诗意的感觉，但是语言有比较通俗易懂，整体内容比较有画面感。",
+      "timestamp": "2026-05-14T21:43:03.090833",
+      "metadata": {}
+    },
+    {
+      "message_id": "b6e8622b-7220-43f8-b821-8961f186da93",
+      "role": "assistant",
+      "content": "好的，这是为您调整后的文案模板预览，整体风格更加诗意且通俗易懂，充满生活画面感 🌿\n\n🖼️ **预览效果**：\n![预览图](https://dashscope-7c2c.oss-accelerate.aliyuncs.com/7d/1d/20260514/888c8bb7/d49bf079-b62a-4327-b05d-2aca733fa61f.png?Expires=1779372240&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=P5ijeOcDtAY1zka018yBmp4DM1g%3D)\n\n📝 **文案内容**：\n\n**标题**：偷偷把周末调成 0.5 倍速🎞️\n\n**☀️ 阳光叫醒的早晨**\n关掉闹钟，任由阳光在木地板上跳起轻快的踢踏舞。慢悠悠泡一杯燕麦拿铁，看热气慢慢晕染开整个房间。今天不赶 KPI，只赶一场和云朵的慵懒约会。\n\n**🛍️ 街角市集的治愈魔法**\n提着帆布袋钻进喧闹的菜市场，指尖沾上带着露水的番茄清香。和摊主阿姨笑着唠两句家常，顺手带走一束刚包好的洋桔梗。原来最顶级的松弛感，就藏在这口热腾腾的人间烟火里。\n\n**🎬 夜晚的微醺放映室**\n拉上窗帘，让投影仪在白墙上投出老电影的柔光滤镜。整个人陷进软乎乎的毛毯里，手边是切好的水果和半杯梅子酒。把白天的烦恼一键清空，今晚只负责做个快乐的做梦家。\n\n**#周末慢生活 #我的治愈系日常 #生活碎片收集 #氛围感居家 #打工人回血指南**\n\n---\n\n这一版文案尝试用“阳光跳舞”、“晕染热气”、“指尖露水”等意象增强画面感，同时保留了日常生活的烟火气，读起来轻松治愈。\n\n请问您对这个版本满意吗？\n- 如果满意，请回复“确认”或“生成”\n- 如果还需要调整，请告诉我您想修改的具体部分\n- 如果想重新生成，请告诉我“重新生成”",
+      "timestamp": "2026-05-14T21:47:38.584507",
+      "metadata": {}
+    }
+  ]
+}

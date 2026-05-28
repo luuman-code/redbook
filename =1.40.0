@@ -1,0 +1,7 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting sentry-sdk
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fa/eb/d875669993b762556ae8b2efd86219943b4c0864d22204d622a9aee3052b/sentry_sdk-2.58.0-py2.py3-none-any.whl (460 kB)
+Requirement already satisfied: urllib3>=1.26.11 in e:\miniconda\lib\site-packages (from sentry-sdk) (2.3.0)
+Requirement already satisfied: certifi in e:\miniconda\lib\site-packages (from sentry-sdk) (2025.1.31)
+Installing collected packages: sentry-sdk
+Successfully installed sentry-sdk-2.58.0

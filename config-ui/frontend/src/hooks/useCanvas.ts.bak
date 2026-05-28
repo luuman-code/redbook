@@ -1,0 +1,776 @@
+// useCanvas Hook - 画板状态管理 Hook
+// 整合 canvasApi 和 WebSocket，提供完整的画板状态管理功能
+
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { canvasApi, Canvas, CanvasElement, CanvasOperation, CanvasSummary, SelectionRegion } from '../api/canvasApi';
+import { useCanvasWebSocket, WSMessageType, CanvasUpdateData, createCanvasOperation, OperationTypes } from './useCanvasWebSocket';
+
+// Tool Types
+export type { ToolType, BaseTool, AITool } from '../components/canvas/types';
+
+// Canvas State
+export interface CanvasState {
+  canvas: Canvas | null;
+  elements: CanvasElement[];
+  selectedIds: string[];
+  selection: SelectionRegion | null;
+  isLoading: boolean;
+  isSaving: boolean;
+  error: string | null;
+  lastSaved: Date | null;
+  isConnected: boolean;
+}
+
+// Hook Options
+export interface UseCanvasOptions {
+  canvasId: string;
+  autoSave?: boolean;
+  autoSaveInterval?: number;
+  reconnect?: boolean;
+}
+
+// Hook Return Type
+export interface UseCanvasReturn {
+  // State
+  canvas: Canvas | null;
+  elements: CanvasElement[];
+  selectedIds: string[];
+  selection: SelectionRegion | null;
+  isLoading: boolean;
+  isSaving: boolean;
+  error: string | null;
+  lastSaved: Date | null;
+  isConnected: boolean;
+
+  // Actions
+  loadCanvas: () => Promise<void>;
+  saveCanvas: () => Promise<void>;
+  addElement: (element: Omit<CanvasElement, 'id' | 'created_at' | 'updated_at'>) => Promise<CanvasElement | null>;
+  updateElement: (elementId: string, updates: Partial<CanvasElement>) => Promise<void>;
+  deleteElements: (elementIds: string[]) => Promise<void>;
+  duplicateElements: (elementIds: string[]) => Promise<void>;
+  moveElements: (elementIds: string[], position: { x: number; y: number }) => Promise<void>;
+  resizeElements: (elementIds: string[], size: { width: number; height: number }) => Promise<void>;
+
+  // Selection
+  selectElement: (elementId: string, addToSelection?: boolean) => void;
+  selectAll: () => void;
+  clearSelection: () => void;
+  setSelection: (selection: SelectionRegion | null) => void;
+
+  // Batch operations
+  groupElements: (elementIds: string[]) => Promise<void>;
+  ungroupElements: (groupId: string) => Promise<void>;
+  alignElements: (elementIds: string[], alignment: 'left' | 'center' | 'right' | 'top' | 'middle' | 'bottom') => Promise<void>;
+
+  // History
+  undo: () => void;
+  redo: () => void;
+  canUndo: boolean;
+  canRedo: boolean;
+
+  // WebSocket
+  sendOperation: (operation: CanvasOperation) => void;
+}
+
+// History entry for undo/redo
+interface HistoryEntry {
+  elements: CanvasElement[];
+  selection: SelectionRegion | null;
+}
+
+export const useCanvas = (options: UseCanvasOptions): UseCanvasReturn => {
+  const {
+    canvasId,
+    autoSave = true,
+    autoSaveInterval = 30000,
+    reconnect = true,
+  } = options;
+
+  // State
+  const [canvas, setCanvas] = useState<Canvas | null>(null);
+  const [elements, setElements] = useState<CanvasElement[]>([]);
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [selection, setSelection] = useState<SelectionRegion | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [lastSaved, setLastSaved] = useState<Date | null>(null);
+
+  // History for undo/redo
+  const [history, setHistory] = useState<HistoryEntry[]>([]);
+  const [historyIndex, setHistoryIndex] = useState(-1);
+
+  // Operation stack for WebSocket
+  const pendingOperationsRef = useRef<Map<string, CanvasOperation>>(new Map());
+
+  // Save current state to history
+  const saveToHistory = useCallback(() => {
+    const entry: HistoryEntry = {
+      elements: JSON.parse(JSON.stringify(elements)),
+      selection: selection ? { ...selection } : null,
+    };
+
+    setHistory(prev => {
+      // Remove any redo history
+      const newHistory = prev.slice(0, historyIndex + 1);
+      newHistory.push(entry);
+      // Limit history size
+      if (newHistory.length > 50) {
+        newHistory.shift();
+      }
+      return newHistory;
+    });
+    setHistoryIndex(prev => Math.min(prev + 1, 49));
+  }, [elements, selection, historyIndex]);
+
+  // Handle canvas update from WebSocket
+  const handleCanvasUpdate = useCallback((update: CanvasUpdateData) => {
+    if (update.operation) {
+      const op = update.operation;
+
+      switch (op.type) {
+        case OperationTypes.CREATE:
+          if (op.after_state.element) {
+            setElements(prev => [...prev, op.after_state.element as CanvasElement]);
+          }
+          break;
+
+        case OperationTypes.DELETE:
+          if (op.target_ids.length > 0) {
+            setElements(prev => prev.filter(el => !op.target_ids.includes(el.id)));
+            setSelectedIds(prev => prev.filter(id => !op.target_ids.includes(id)));
+          }
+          break;
+
+        case OperationTypes.UPDATE:
+        case OperationTypes.MOVE:
+        case OperationTypes.RESIZE:
+        case OperationTypes.STYLE:
+          if (op.target_ids.length > 0 && op.after_state.elements) {
+            setElements(prev =>
+              prev.map(el => {
+                const updated = (op.after_state.elements as CanvasElement[]).find(u => u.id === el.id);
+                return updated || el;
+              })
+            );
+          }
+          break;
+      }
+    }
+
+    // If elements are provided directly, use them
+    if (update.elements) {
+      setElements(update.elements);
+    }
+  }, []);
+
+  // WebSocket connection
+  const {
+    isConnected,
+    sendOperation: wsSendOperation,
+  } = useCanvasWebSocket({
+    canvasId,
+    onCanvasUpdate: handleCanvasUpdate,
+    reconnect,
+  });
+
+  // Load canvas
+  const loadCanvas = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+
+      const response = await canvasApi.loadCanvas(canvasId);
+
+      if (response.success && response.canvas) {
+        setCanvas(response.canvas);
+        setElements(response.canvas.elements || []);
+        setSelectedIds([]);
+        setSelection(null);
+
+        // Reset history
+        setHistory([{
+          elements: response.canvas.elements || [],
+          selection: null,
+        }]);
+        setHistoryIndex(0);
+      } else {
+        setError(response.error || '加载画板失败');
+      }
+    } catch (err) {
+      setError('加载画板失败');
+      console.error('Failed to load canvas:', err);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [canvasId]);
+
+  // Save canvas
+  const saveCanvas = useCallback(async () => {
+    try {
+      setIsSaving(true);
+      await canvasApi.saveElements(canvasId, elements);
+      setLastSaved(new Date());
+    } catch (err) {
+      setError('保存画板失败');
+      console.error('Failed to save canvas:', err);
+    } finally {
+      setIsSaving(false);
+    }
+  }, [canvasId, elements]);
+
+  // Auto-save
+  useEffect(() => {
+    if (!autoSave || !canvas) return;
+
+    const interval = setInterval(() => {
+      saveCanvas();
+    }, autoSaveInterval);
+
+    return () => clearInterval(interval);
+  }, [autoSave, autoSaveInterval, saveCanvas, canvas]);
+
+  // Initial load
+  useEffect(() => {
+    loadCanvas();
+  }, [loadCanvas]);
+
+  // Add element
+  const addElement = useCallback(async (elementData: Omit<CanvasElement, 'id' | 'created_at' | 'updated_at'>): Promise<CanvasElement | null> => {
+    try {
+      const response = await canvasApi.addElement(canvasId, elementData);
+
+      if (response.success && response.element) {
+        saveToHistory();
+        setElements(prev => [...prev, response.element!]);
+
+        // Send operation via WebSocket
+        const operation = createCanvasOperation(
+          OperationTypes.CREATE,
+          [response.element.id],
+          { element: response.element },
+          {},
+          'user',
+          `添加 ${response.element.type} 元素`
+        );
+        wsSendOperation(operation, false);
+
+        return response.element;
+      }
+      return null;
+    } catch (err) {
+      console.error('Failed to add element:', err);
+      return null;
+    }
+  }, [canvasId, saveToHistory, wsSendOperation]);
+
+  // Update element
+  const updateElement = useCallback(async (elementId: string, updates: Partial<CanvasElement>): Promise<void> => {
+    const oldElement = elements.find(el => el.id === elementId);
+
+    try {
+      // Optimistic update
+      setElements(prev =>
+        prev.map(el =>
+          el.id === elementId ? { ...el, ...updates } : el
+        )
+      );
+
+      await canvasApi.updateElement(canvasId, elementId, updates);
+
+      // Send operation via WebSocket
+      const newElement = elements.find(el => el.id === elementId);
+      if (newElement) {
+        const operation = createCanvasOperation(
+          OperationTypes.UPDATE,
+          [elementId],
+          { element: { ...newElement, ...updates } },
+          { element: oldElement },
+          'user',
+          `更新元素`
+        );
+        wsSendOperation(operation, false);
+      }
+    } catch (err) {
+      // Rollback on error
+      if (oldElement) {
+        setElements(prev =>
+          prev.map(el =>
+            el.id === elementId ? oldElement : el
+          )
+        );
+      }
+      console.error('Failed to update element:', err);
+    }
+  }, [canvasId, elements, wsSendOperation]);
+
+  // Delete elements
+  const deleteElements = useCallback(async (elementIds: string[]): Promise<void> => {
+    const deletedElements = elements.filter(el => elementIds.includes(el.id));
+
+    try {
+      saveToHistory();
+
+      // Optimistic update
+      setElements(prev => prev.filter(el => !elementIds.includes(el.id)));
+      setSelectedIds(prev => prev.filter(id => !elementIds.includes(id)));
+
+      await canvasApi.deleteElements(canvasId, elementIds);
+
+      // Send operation via WebSocket
+      const operation = createCanvasOperation(
+        OperationTypes.DELETE,
+        elementIds,
+        {},
+        { elements: deletedElements },
+        'user',
+        `删除 ${deletedElements.length} 个元素`
+      );
+      wsSendOperation(operation, false);
+    } catch (err) {
+      // Rollback on error
+      setElements(prev => [...prev, ...deletedElements]);
+      console.error('Failed to delete elements:', err);
+    }
+  }, [canvasId, elements, saveToHistory, wsSendOperation]);
+
+  // Duplicate elements
+  const duplicateElements = useCallback(async (elementIds: string[]): Promise<void> => {
+    const elementsToDuplicate = elements.filter(el => elementIds.includes(el.id));
+    const newElements: CanvasElement[] = [];
+
+    try {
+      for (const el of elementsToDuplicate) {
+        const newElementData: Omit<CanvasElement, 'id' | 'created_at' | 'updated_at'> = {
+          ...el,
+          position: {
+            x: el.position.x + 20,
+            y: el.position.y + 20,
+          },
+          z_index: elements.length + newElements.length + 1,
+        };
+
+        const response = await canvasApi.addElement(canvasId, newElementData);
+        if (response.success && response.element) {
+          newElements.push(response.element);
+        }
+      }
+
+      if (newElements.length > 0) {
+        saveToHistory();
+        setElements(prev => [...prev, ...newElements]);
+        setSelectedIds(newElements.map(el => el.id));
+      }
+    } catch (err) {
+      console.error('Failed to duplicate elements:', err);
+    }
+  }, [canvasId, elements, saveToHistory]);
+
+  // Move elements
+  const moveElements = useCallback(async (elementIds: string[], position: { x: number; y: number }): Promise<void> => {
+    const movedElements = elements.filter(el => elementIds.includes(el.id));
+    const oldPositions: Map<string, { x: number; y: number }> = new Map();
+
+    movedElements.forEach(el => {
+      oldPositions.set(el.id, { ...el.position });
+    });
+
+    try {
+      // Optimistic update
+      setElements(prev =>
+        prev.map(el =>
+          elementIds.includes(el.id)
+            ? { ...el, position: { ...position } }
+            : el
+        )
+      );
+
+      // Calculate delta for each element
+      const deltaX = position.x - (movedElements[0]?.position.x || 0);
+      const deltaY = position.y - (movedElements[0]?.position.y || 0);
+
+      const updatedElements = elements.map(el => {
+        if (elementIds.includes(el.id)) {
+          return {
+            ...el,
+            position: {
+              x: el.position.x + deltaX,
+              y: el.position.y + deltaY,
+            },
+          };
+        }
+        return el;
+      });
+
+      await canvasApi.saveElements(canvasId, updatedElements);
+
+      // Send operation via WebSocket
+      const operation = createCanvasOperation(
+        OperationTypes.MOVE,
+        elementIds,
+        { elements: updatedElements.filter(el => elementIds.includes(el.id)) },
+        { elements: movedElements },
+        'user',
+        `移动 ${elementIds.length} 个元素`
+      );
+      wsSendOperation(operation, false);
+    } catch (err) {
+      // Rollback
+      setElements(prev =>
+        prev.map(el => {
+          const oldPos = oldPositions.get(el.id);
+          return oldPos ? { ...el, position: oldPos } : el;
+        })
+      );
+      console.error('Failed to move elements:', err);
+    }
+  }, [canvasId, elements, wsSendOperation]);
+
+  // Resize elements
+  const resizeElements = useCallback(async (elementIds: string[], size: { width: number; height: number }): Promise<void> => {
+    const resizedElements = elements.filter(el => elementIds.includes(el.id));
+    const oldSizes: Map<string, { width: number; height: number }> = new Map();
+
+    resizedElements.forEach(el => {
+      oldSizes.set(el.id, { ...el.size });
+    });
+
+    try {
+      // Optimistic update
+      setElements(prev =>
+        prev.map(el =>
+          elementIds.includes(el.id)
+            ? { ...el, size: { ...size } }
+            : el
+        )
+      );
+
+      await canvasApi.saveElements(canvasId, elements.map(el =>
+        elementIds.includes(el.id) ? { ...el, size: { ...size } } : el
+      ));
+
+      // Send operation via WebSocket
+      const operation = createCanvasOperation(
+        OperationTypes.RESIZE,
+        elementIds,
+        { size },
+        { elements: resizedElements },
+        'user',
+        `调整 ${elementIds.length} 个元素大小`
+      );
+      wsSendOperation(operation, false);
+    } catch (err) {
+      // Rollback
+      setElements(prev =>
+        prev.map(el => {
+          const oldSize = oldSizes.get(el.id);
+          return oldSize ? { ...el, size: oldSize } : el;
+        })
+      );
+      console.error('Failed to resize elements:', err);
+    }
+  }, [canvasId, elements, wsSendOperation]);
+
+  // Selection helpers
+  const selectElement = useCallback((elementId: string, addToSelection: boolean = false): void => {
+    setSelection(null);
+    setSelectedIds(prev =>
+      addToSelection
+        ? prev.includes(elementId)
+          ? prev.filter(id => id !== elementId)
+          : [...prev, elementId]
+        : [elementId]
+    );
+  }, []);
+
+  const selectAll = useCallback((): void => {
+    setSelectedIds(elements.map(el => el.id));
+    setSelection(null);
+  }, [elements]);
+
+  const clearSelection = useCallback(): void => {
+    setSelectedIds([]);
+    setSelection(null);
+  }, []);
+
+  // Group elements
+  const groupElements = useCallback(async (elementIds: string[]): Promise<void> => {
+    if (elementIds.length < 2) return;
+
+    const groupedElements = elements.filter(el => elementIds.includes(el.id));
+
+    try {
+      // Create group element
+      const minX = Math.min(...groupedElements.map(el => el.position.x));
+      const minY = Math.min(...groupedElements.map(el => el.position.y));
+      const maxX = Math.max(...groupedElements.map(el => el.position.x + el.size.width));
+      const maxY = Math.max(...groupedElements.map(el => el.position.y + el.size.height));
+
+      const groupElement: Omit<CanvasElement, 'id' | 'created_at' | 'updated_at'> = {
+        type: 'group',
+        position: { x: minX, y: minY },
+        size: { width: maxX - minX, height: maxY - minY },
+        z_index: Math.max(...groupedElements.map(el => el.z_index)) + 1,
+        locked: false,
+        visible: true,
+        metadata: {
+          child_ids: elementIds,
+        },
+        styles: {
+          x: minX,
+          y: minY,
+          width: maxX - minX,
+          height: maxY - minY,
+          rotation: 0,
+          stroke_width: 1,
+          opacity: 1,
+          corner_radius: 0,
+          shadow_enabled: false,
+          shadow_blur: 0,
+          shadow_offset_x: 0,
+          shadow_offset_y: 0,
+          blur: 0,
+          brightness: 100,
+          contrast: 100,
+        },
+        created_by: 'user',
+      };
+
+      const response = await canvasApi.addElement(canvasId, groupElement);
+      if (response.success && response.element) {
+        saveToHistory();
+        setElements(prev => [
+          ...prev.map(el =>
+            elementIds.includes(el.id)
+              ? { ...el, parent_id: response.element!.id }
+              : el
+          ),
+          response.element,
+        ]);
+
+        const operation = createCanvasOperation(
+          OperationTypes.GROUP,
+          elementIds,
+          { element: response.element },
+          {},
+          'user',
+          `组合 ${elementIds.length} 个元素`
+        );
+        wsSendOperation(operation, false);
+      }
+    } catch (err) {
+      console.error('Failed to group elements:', err);
+    }
+  }, [canvasId, elements, saveToHistory, wsSendOperation]);
+
+  // Ungroup elements
+  const ungroupElements = useCallback(async (groupId: string): Promise<void> => {
+    const groupElement = elements.find(el => el.id === groupId);
+    if (!groupElement || groupElement.type !== 'group') return;
+
+    const childIds = groupElement.metadata.child_ids || [];
+
+    try {
+      saveToHistory();
+
+      setElements(prev =>
+        prev
+          .filter(el => el.id !== groupId)
+          .map(el =>
+            childIds.includes(el.id)
+              ? { ...el, parent_id: undefined }
+              : el
+          )
+      );
+
+      await canvasApi.deleteElements(canvasId, [groupId]);
+
+      const operation = createCanvasOperation(
+        OperationTypes.UNGROUP,
+        [groupId],
+        {},
+        { element: groupElement },
+        'user',
+        '取消组合'
+      );
+      wsSendOperation(operation, false);
+    } catch (err) {
+      console.error('Failed to ungroup elements:', err);
+    }
+  }, [canvasId, elements, saveToHistory, wsSendOperation]);
+
+  // Align elements
+  const alignElements = useCallback(async (
+    elementIds: string[],
+    alignment: 'left' | 'center' | 'right' | 'top' | 'middle' | 'bottom'
+  ): Promise<void> => {
+    const alignedElements = elements.filter(el => elementIds.includes(el.id));
+    if (alignedElements.length < 2) return;
+
+    const oldElements = JSON.parse(JSON.stringify(alignedElements)) as CanvasElement[];
+
+    try {
+      let targetPos: number;
+
+      switch (alignment) {
+        case 'left':
+          targetPos = Math.min(...alignedElements.map(el => el.position.x));
+          setElements(prev =>
+            prev.map(el =>
+              elementIds.includes(el.id)
+                ? { ...el, position: { ...el.position, x: targetPos } }
+                : el
+            )
+          );
+          break;
+
+        case 'center':
+          const centerX = alignedElements.reduce((sum, el) => sum + el.position.x + el.size.width / 2, 0) / alignedElements.length;
+          setElements(prev =>
+            prev.map(el =>
+              elementIds.includes(el.id)
+                ? { ...el, position: { ...el.position, x: centerX - el.size.width / 2 } }
+                : el
+            )
+          );
+          break;
+
+        case 'right':
+          targetPos = Math.max(...alignedElements.map(el => el.position.x + el.size.width));
+          setElements(prev =>
+            prev.map(el =>
+              elementIds.includes(el.id)
+                ? { ...el, position: { ...el.position, x: targetPos - el.size.width } }
+                : el
+            )
+          );
+          break;
+
+        case 'top':
+          targetPos = Math.min(...alignedElements.map(el => el.position.y));
+          setElements(prev =>
+            prev.map(el =>
+              elementIds.includes(el.id)
+                ? { ...el, position: { ...el.position, y: targetPos } }
+                : el
+            )
+          );
+          break;
+
+        case 'middle':
+          const centerY = alignedElements.reduce((sum, el) => sum + el.position.y + el.size.height / 2, 0) / alignedElements.length;
+          setElements(prev =>
+            prev.map(el =>
+              elementIds.includes(el.id)
+                ? { ...el, position: { ...el.position, y: centerY - el.size.height / 2 } }
+                : el
+            )
+          );
+          break;
+
+        case 'bottom':
+          targetPos = Math.max(...alignedElements.map(el => el.position.y + el.size.height));
+          setElements(prev =>
+            prev.map(el =>
+              elementIds.includes(el.id)
+                ? { ...el, position: { ...el.position, y: targetPos - el.size.height } }
+                : el
+            )
+          );
+          break;
+      }
+
+      saveToHistory();
+      await canvasApi.saveElements(canvasId, elements);
+
+      const operation = createCanvasOperation(
+        OperationTypes.ALIGN,
+        elementIds,
+        { alignment },
+        { elements: oldElements },
+        'user',
+        `对齐元素: ${alignment}`
+      );
+      wsSendOperation(operation, false);
+    } catch (err) {
+      console.error('Failed to align elements:', err);
+    }
+  }, [canvasId, elements, saveToHistory, wsSendOperation]);
+
+  // Undo
+  const undo = useCallback((): void => {
+    if (historyIndex <= 0) return;
+
+    const prevEntry = history[historyIndex - 1];
+    if (prevEntry) {
+      setElements(prevEntry.elements);
+      setSelection(prevEntry.selection);
+      setSelectedIds([]);
+      setHistoryIndex(prev => prev - 1);
+    }
+  }, [history, historyIndex]);
+
+  // Redo
+  const redo = useCallback((): void => {
+    if (historyIndex >= history.length - 1) return;
+
+    const nextEntry = history[historyIndex + 1];
+    if (nextEntry) {
+      setElements(nextEntry.elements);
+      setSelection(nextEntry.selection);
+      setSelectedIds([]);
+      setHistoryIndex(prev => prev + 1);
+    }
+  }, [history, historyIndex]);
+
+  // Send operation via WebSocket
+  const sendOperation = useCallback((operation: CanvasOperation): void => {
+    wsSendOperation(operation, true);
+  }, [wsSendOperation]);
+
+  return {
+    // State
+    canvas,
+    elements,
+    selectedIds,
+    selection,
+    isLoading,
+    isSaving,
+    error,
+    lastSaved,
+    isConnected,
+
+    // Actions
+    loadCanvas,
+    saveCanvas,
+    addElement,
+    updateElement,
+    deleteElements,
+    duplicateElements,
+    moveElements,
+    resizeElements,
+
+    // Selection
+    selectElement,
+    selectAll,
+    clearSelection,
+    setSelection,
+
+    // Batch operations
+    groupElements,
+    ungroupElements,
+    alignElements,
+
+    // History
+    undo,
+    redo,
+    canUndo: historyIndex > 0,
+    canRedo: historyIndex < history.length - 1,
+
+    // WebSocket
+    sendOperation,
+  };
+};
+
+export default useCanvas;

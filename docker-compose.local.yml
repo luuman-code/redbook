@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: redbook-backend-local
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data:rw  # Local data persistence
+      - ./.env:/app/.env:ro  # Environment variables (read-only)
+    environment:
+      - DATABASE_URL=sqlite:///data/redbook.db
+      - DATA_DIR=/app/data
+      - LOG_LEVEL=INFO
+      - ENV=local
+      - DEBUG=true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: redbook-frontend-local
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  redbook-data:
+    driver: local

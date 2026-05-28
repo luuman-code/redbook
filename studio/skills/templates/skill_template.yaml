@@ -1,0 +1,27 @@
+# Skill 模板文件
+# 用于创建新的技能文件
+
+name: {skill_name}
+description: 简短描述（用于技能目录 L1 披露）
+version: 1.0
+agent_type: canvas  # 指定适用 Agent 类型，可选
+
+# 【可选】第二级披露：preview_skill 时返回
+# 1-2 句话概括技能用途
+catalog_instruction: |
+  技能用途概要说明
+
+# 【必填】完整技能指令（L3 披露）
+prompt: |
+  # 完整技能指令
+  # 在指令中自然语言说明依赖关系，如：
+  # "在执行编辑前，你需要先激活 canvas_understand 获取画板状态"
+
+# 【可选】允许的工具列表（安全机制）
+# 不在列表中的工具将被 ToolEnforcer 拦截
+allowed_tools:  # 可选
+  - tool_a
+  - tool_b
+
+# 【可选】技能依赖声明（用于文档和 UI 提示，不强制执行）
+dependencies:  # 可选，如 [canvas_understand]

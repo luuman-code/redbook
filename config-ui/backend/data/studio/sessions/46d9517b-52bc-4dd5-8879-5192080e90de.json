@@ -1,0 +1,290 @@
+{
+  "session_id": "46d9517b-52bc-4dd5-8879-5192080e90de",
+  "brief": {
+    "id": "50d73674-5c2f-4fcf-8973-d3595571f9bf",
+    "goal": "plant",
+    "style": "清新",
+    "keywords": [
+      "生活方式",
+      "好物推荐"
+    ],
+    "must_include": [
+      "产品细节展示",
+      "使用场景代入",
+      "真实体验感受"
+    ],
+    "image_style": "摄影实拍",
+    "need_video": false,
+    "need_voiceover": false,
+    "need_text": true,
+    "need_images": true,
+    "need_bgm": false,
+    "bgm_preference": "轻快治愈系纯音乐",
+    "target_audience": "追求生活品质、喜欢探索新事物的年轻女性（18-35岁）",
+    "reference_materials": [],
+    "raw_input": "你好",
+    "extracted_product_info": {},
+    "created_at": "2026-05-04T00:13:44.711330"
+  },
+  "current_plan": {
+    "plan_id": "4f55bd13-8e13-4f61-8f09-ead17d4127d6",
+    "brief_id": "50d73674-5c2f-4fcf-8973-d3595571f9bf",
+    "title": "把春天搬进出租屋🌿这盆“治愈系绿植”让我宅家不想出门",
+    "text_sections": [
+      {
+        "section_id": "sec_625f5528",
+        "section_type": "text",
+        "content": "",
+        "content_words": 80,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_df21f8f0",
+        "section_type": "text",
+        "content": "",
+        "content_words": 110,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_1bc06477",
+        "section_type": "text",
+        "content": "",
+        "content_words": 90,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_276c68a1",
+        "section_type": "cta",
+        "content": "",
+        "content_words": 30,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_5dfbdb77",
+        "section_type": "hashtag",
+        "content": "",
+        "content_words": 40,
+        "priority": 2,
+        "is_optional": false
+      }
+    ],
+    "image_plan": {
+      "style": "自然写实风格，注重光影层次与材质肌理呈现，采用生活化构图与动态抓拍视角",
+      "elements": [
+        "产品微距特写（突出工艺细节/材质纹理）",
+        "多场景使用画面（办公/居家/户外等环境融合）",
+        "人物互动纪实（手部操作/面部自然表情/生活化动作）",
+        "环境氛围营造（晨光/黄昏等自然光线投射）"
+      ],
+      "count": 4,
+      "aspect_ratio": "4:3",
+      "color_scheme": "低饱和自然色系，保留原始肤色与产品本色，局部点缀温暖环境光",
+      "reference_image_ids": []
+    },
+    "video_plan": null,
+    "audio_plan": null,
+    "estimated_duration": 67,
+    "version": 1,
+    "metadata": {}
+  },
+  "current_version": 1,
+  "items": [],
+  "status": "planning",
+  "created_at": "2026-05-04T00:14:10.297182",
+  "updated_at": "2026-05-04T00:27:13.072063",
+  "versions": [
+    {
+      "version_id": "46d9517b-52bc-4dd5-8879-5192080e90de_v1",
+      "version_number": 1,
+      "session_id": "46d9517b-52bc-4dd5-8879-5192080e90de",
+      "plan_snapshot": {
+        "plan_id": "4f55bd13-8e13-4f61-8f09-ead17d4127d6",
+        "brief_id": "50d73674-5c2f-4fcf-8973-d3595571f9bf",
+        "title": "把春天搬进出租屋🌿这盆“治愈系绿植”让我宅家不想出门",
+        "text_sections": [
+          {
+            "section_id": "sec_625f5528",
+            "section_type": "text",
+            "content": "",
+            "content_words": 80,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_df21f8f0",
+            "section_type": "text",
+            "content": "",
+            "content_words": 110,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_1bc06477",
+            "section_type": "text",
+            "content": "",
+            "content_words": 90,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_276c68a1",
+            "section_type": "cta",
+            "content": "",
+            "content_words": 30,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_5dfbdb77",
+            "section_type": "hashtag",
+            "content": "",
+            "content_words": 40,
+            "priority": 2,
+            "is_optional": false
+          }
+        ],
+        "image_plan": {
+          "style": "自然写实风格，注重光影层次与材质肌理呈现，采用生活化构图与动态抓拍视角",
+          "elements": [
+            "产品微距特写（突出工艺细节/材质纹理）",
+            "多场景使用画面（办公/居家/户外等环境融合）",
+            "人物互动纪实（手部操作/面部自然表情/生活化动作）",
+            "环境氛围营造（晨光/黄昏等自然光线投射）"
+          ],
+          "count": 4,
+          "aspect_ratio": "4:3",
+          "color_scheme": "低饱和自然色系，保留原始肤色与产品本色，局部点缀温暖环境光",
+          "reference_image_ids": []
+        },
+        "video_plan": null,
+        "audio_plan": null,
+        "estimated_duration": 67,
+        "version": 1,
+        "metadata": {}
+      },
+      "items_snapshot": [],
+      "change_summary": "初始版本",
+      "created_by": "orchestrator",
+      "created_at": "2026-05-04T00:14:10.297182",
+      "metadata": {}
+    }
+  ],
+  "metadata": {},
+  "messages": [
+    {
+      "message_id": "c5560dd8-4e29-44b7-96ce-fe44f10e57a7",
+      "role": "assistant",
+      "content": "这是为你生成的内容方案，请确认：",
+      "timestamp": "2026-05-04T00:14:10.297182",
+      "metadata": {
+        "message_type": "plan",
+        "intent_type": "plan_confirmation",
+        "plan_data": {
+          "plan_id": "4f55bd13-8e13-4f61-8f09-ead17d4127d6",
+          "brief_id": "50d73674-5c2f-4fcf-8973-d3595571f9bf",
+          "title": "把春天搬进出租屋🌿这盆“治愈系绿植”让我宅家不想出门",
+          "text_sections": [
+            {
+              "section_id": "sec_625f5528",
+              "section_type": "text",
+              "content": "",
+              "content_words": 80,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_df21f8f0",
+              "section_type": "text",
+              "content": "",
+              "content_words": 110,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_1bc06477",
+              "section_type": "text",
+              "content": "",
+              "content_words": 90,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_276c68a1",
+              "section_type": "cta",
+              "content": "",
+              "content_words": 30,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_5dfbdb77",
+              "section_type": "hashtag",
+              "content": "",
+              "content_words": 40,
+              "priority": 2,
+              "is_optional": false
+            }
+          ],
+          "image_plan": {
+            "style": "自然写实风格，注重光影层次与材质肌理呈现，采用生活化构图与动态抓拍视角",
+            "elements": [
+              "产品微距特写（突出工艺细节/材质纹理）",
+              "多场景使用画面（办公/居家/户外等环境融合）",
+              "人物互动纪实（手部操作/面部自然表情/生活化动作）",
+              "环境氛围营造（晨光/黄昏等自然光线投射）"
+            ],
+            "count": 4,
+            "aspect_ratio": "4:3",
+            "color_scheme": "低饱和自然色系，保留原始肤色与产品本色，局部点缀温暖环境光",
+            "reference_image_ids": []
+          },
+          "video_plan": null,
+          "audio_plan": null,
+          "estimated_duration": 67,
+          "version": 1,
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "message_id": "6da5f4b0-8de5-4f65-b37f-5d6049b56f25",
+      "role": "user",
+      "content": "我需要你帮我推荐一款蓝牙耳机加momo",
+      "timestamp": "2026-05-04T00:18:43.135840",
+      "metadata": {}
+    },
+    {
+      "message_id": "0896f4d5-a00f-4446-91c1-1b7770d00a30",
+      "role": "assistant",
+      "content": "明白了，你想要：我需要你帮我推荐一款蓝牙耳机加momo...\n\n让我分析一下这个需求，并为你生成合适的内容方案。",
+      "timestamp": "2026-05-04T00:18:43.135840",
+      "metadata": {
+        "suggested_actions": [],
+        "intent_type": "brief_update",
+        "message_type": "text"
+      }
+    },
+    {
+      "message_id": "171cd234-a571-4e1b-8467-c3252191c812",
+      "role": "user",
+      "content": "我需要你帮我推荐一款蓝牙耳机叫momo",
+      "timestamp": "2026-05-04T00:27:13.072063",
+      "metadata": {}
+    },
+    {
+      "message_id": "0e0a96e8-97d5-4add-8997-a7a13c6ba0a8",
+      "role": "assistant",
+      "content": "明白了，你想要：我需要你帮我推荐一款蓝牙耳机叫momo...\n\n让我分析一下这个需求，并为你生成合适的内容方案。",
+      "timestamp": "2026-05-04T00:27:13.072063",
+      "metadata": {
+        "suggested_actions": [],
+        "intent_type": "brief_update",
+        "message_type": "text"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+skills:
+  - file: canvas_draw.yaml
+    description: SVG Path 自由曲线绘制
+  - file: canvas_understand.yaml
+    description: 理解画布状态
+  - file: canvas_edit.yaml
+    description: 修改选中/框选内容
+  - file: canvas_undo.yaml
+    description: 回撤绘制（橡皮擦）
+  - file: canvas_snapshot.yaml
+    description: 获取画布视觉快照
+  - file: canvas_planning.yaml
+    description: 规划模式专用 - 介绍工作模式下可用工具

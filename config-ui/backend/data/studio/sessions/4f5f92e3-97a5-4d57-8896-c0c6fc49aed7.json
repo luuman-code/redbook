@@ -1,0 +1,48 @@
+{
+  "session_id": "4f5f92e3-97a5-4d57-8896-c0c6fc49aed7",
+  "brief": {
+    "id": "3060684f-ff7f-42e0-8451-41bd53711471",
+    "goal": "plant",
+    "style": "活泼",
+    "keywords": [],
+    "must_include": [],
+    "image_style": "摄影实拍",
+    "need_video": false,
+    "need_voiceover": false,
+    "need_text": true,
+    "need_images": true,
+    "need_bgm": false,
+    "bgm_preference": "轻快",
+    "target_audience": "",
+    "reference_materials": [],
+    "raw_input": "",
+    "extracted_product_info": {},
+    "template_image_url": null,
+    "template_analysis": [],
+    "created_at": "2026-05-10T22:02:07.159404"
+  },
+  "current_plan": null,
+  "current_version": 1,
+  "items": [],
+  "status": "created",
+  "created_at": "2026-05-10T22:02:07.159404",
+  "updated_at": "2026-05-10T22:02:07.159404",
+  "versions": [],
+  "metadata": {},
+  "messages": [
+    {
+      "message_id": "14b2beb4-987f-40a0-98ca-3a1259c29851",
+      "role": "user",
+      "content": "我需要你帮我编造一个生活趣事，要求正能量的、积极的、成长向的，先将上传的文案模板图片中的文本内容去除，将生成的生活趣事文案替换到原先的文案模板图片中，生成文案模板预览。",
+      "timestamp": "2026-05-10T22:02:22.533454",
+      "metadata": {}
+    },
+    {
+      "message_id": "aa7e775c-4720-41ae-b4c3-b1a38ef7f4b7",
+      "role": "assistant",
+      "content": "✨ 好啦！已根据你上传的文案模板图片风格，生成了新的生活趣事文案，并替换到原图中～  \n\n这是为你定制的**正能量·成长向**小故事，延续了原模板的治愈温柔调性，但内容更轻快积极 🌞：\n\n---\n\n### 📝 **新文案内容**（三行6字诗意结构）：\n> “**晨光追着我跑**  \n> **连咖啡都变甜了**  \n> **原来幸福会冒泡**”\n\n（注：为适配原模板的18字三行结构，核心金句已精炼至此；完整故事在预览图中展开）\n\n---\n\n### 🖼️ **预览效果**\n![文案模板预览图](https://dashscope-7c2c.oss-accelerate.aliyuncs.com/7d/b6/20260510/1bccbb46/165d4e4d-5907-482c-a1c0-f72983927497.png?Expires=1779027647&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=XlGmD4gqBjFgK24TOgm7F6Rr1kk%3D)\n\n背景仍是那片温暖日落海滩🌅，但文案已更新为你的专属生活趣事——  \n**阳光、咖啡、小确幸**，全是成长路上闪闪发光的碎片 ✨\n\n---\n\n需要我：\n- 调整某句文案更口语/更诗意？\n- 换个场景（比如雨天、公园、厨房）？\n- 补充更多细节让故事更丰满？\n\n随时告诉我～ 😊",
+      "timestamp": "2026-05-10T22:04:22.445682",
+      "metadata": {}
+    }
+  ]
+}

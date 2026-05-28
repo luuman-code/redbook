@@ -1,0 +1,342 @@
+{
+  "session_id": "9d713972-f807-45bf-b01e-46288da582f6",
+  "brief": {
+    "id": "ec00482a-2c10-4cfe-b136-a3697b4013e5",
+    "goal": "plant",
+    "style": "活泼",
+    "keywords": [
+      "平价好物",
+      "学生党必备",
+      "宿舍神器"
+    ],
+    "must_include": [
+      "真实使用场景",
+      "价格对比图"
+    ],
+    "image_style": "摄影实拍",
+    "need_video": true,
+    "need_voiceover": true,
+    "need_text": true,
+    "need_images": true,
+    "need_bgm": true,
+    "bgm_preference": "轻快 upbeat 的流行电子或吉他小调",
+    "target_audience": "18-25岁大学生及初入职场的年轻人，注重性价比与实用性的女性用户为主",
+    "reference_materials": [],
+    "raw_input": "",
+    "extracted_product_info": {},
+    "template_image_url": null,
+    "created_at": "2026-05-06T21:48:04.329957"
+  },
+  "current_plan": {
+    "plan_id": "6f36ef89-69f6-485f-84ac-1aa261a7516c",
+    "brief_id": "ec00482a-2c10-4cfe-b136-a3697b4013e5",
+    "title": "宿舍党狂喜！9.9元种出ins风绿植，连宿管阿姨都夸我有生活感✨",
+    "text_sections": [
+      {
+        "section_id": "sec_e92a0d79",
+        "section_type": "headline",
+        "content": "",
+        "content_words": 12,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_5c24a246",
+        "section_type": "text",
+        "content": "",
+        "content_words": 180,
+        "priority": 1,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_a372f3d0",
+        "section_type": "text",
+        "content": "",
+        "content_words": 120,
+        "priority": 2,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_3c592bea",
+        "section_type": "hashtag",
+        "content": "",
+        "content_words": 25,
+        "priority": 3,
+        "is_optional": false
+      },
+      {
+        "section_id": "sec_e683718b",
+        "section_type": "cta",
+        "content": "",
+        "content_words": 20,
+        "priority": 2,
+        "is_optional": false
+      }
+    ],
+    "image_plan": {
+      "style": "高清摄影实拍风格，自然光线，生活化真实场景，突出产品使用细节与价格信息的清晰呈现",
+      "elements": [
+        "真实用户在日常场景中使用产品的画面（如厨房、办公桌、通勤途中）",
+        "叠加式价格对比图（原价划线+促销价高亮，可置于画面角落或悬浮层）",
+        "产品特写与使用动作结合（如手持、操作界面）"
+      ],
+      "count": 4,
+      "aspect_ratio": "4:3",
+      "color_scheme": "中性偏暖色调（米白、浅灰为主），价格信息用对比色（如深红/橙黄）突出",
+      "reference_image_ids": []
+    },
+    "video_plan": {
+      "duration": 30,
+      "scenes": [
+        {
+          "scene_id": "场景1",
+          "description": "一位年轻人在家中阳台用手机拍摄一盆绿植，展示植物生长状态，随后拿出手机打开购物App对比不同品牌同款植物的价格",
+          "duration": 15,
+          "visual_prompt": "卡通风格手绘动画：阳光明媚的阳台，绿植生机勃勃；主角手持手机，屏幕分屏显示三款植物商品页及价格标签（¥19.9、¥29.9、¥45），箭头标注‘同品种’‘同规格’"
+        },
+        {
+          "scene_id": "场景2",
+          "description": "主角将低价植物带回家种植，快速剪辑展示浇水、晒太阳、一周后长出新叶的过程，最后与高价植物并排对比，生长状态相似",
+          "duration": 10,
+          "visual_prompt": "动态插画：时间流逝效果（时钟旋转+日历翻页），植物从枯黄到茂盛的渐变过程；结尾双盆植物并列，标尺显示高度一致，打勾图标浮现"
+        },
+        {
+          "scene_id": "场景3",
+          "description": "主角对着镜头微笑竖起大拇指，背景弹出‘省心又省钱’标语和价格对比总结图",
+          "duration": 5,
+          "visual_prompt": "明亮简洁插画风：主角居中，身后悬浮半透明价格对比图（左侧¥19.9→✅健康生长；右侧¥45→✅健康生长；中间箭头→‘差价¥25.1，效果一样！’）"
+        }
+      ],
+      "voiceover": "还在花大价钱买贵价绿植？看这里！真实阳台场景实测——同品种植物，¥19.9和¥45的，养一周，长势居然一模一样！省下的钱，够买两杯奶茶啦～",
+      "voice_type": "年轻活力女声",
+      "style": "活泼轻快，带节奏感音效"
+    },
+    "audio_plan": {
+      "tts_text": "今天给大家分享真实使用场景, 价格对比图，活泼风格介绍",
+      "voice": "alloy",
+      "speed": 1.0,
+      "bgm_style": "轻快 upbeat 的流行电子或吉他小调"
+    },
+    "estimated_duration": 80,
+    "version": 1,
+    "metadata": {}
+  },
+  "current_version": 1,
+  "items": [],
+  "status": "planning",
+  "created_at": "2026-05-06T21:48:32.727927",
+  "updated_at": "2026-05-06T21:48:32.727927",
+  "versions": [
+    {
+      "version_id": "9d713972-f807-45bf-b01e-46288da582f6_v1",
+      "version_number": 1,
+      "session_id": "9d713972-f807-45bf-b01e-46288da582f6",
+      "plan_snapshot": {
+        "plan_id": "6f36ef89-69f6-485f-84ac-1aa261a7516c",
+        "brief_id": "ec00482a-2c10-4cfe-b136-a3697b4013e5",
+        "title": "宿舍党狂喜！9.9元种出ins风绿植，连宿管阿姨都夸我有生活感✨",
+        "text_sections": [
+          {
+            "section_id": "sec_e92a0d79",
+            "section_type": "headline",
+            "content": "",
+            "content_words": 12,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_5c24a246",
+            "section_type": "text",
+            "content": "",
+            "content_words": 180,
+            "priority": 1,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_a372f3d0",
+            "section_type": "text",
+            "content": "",
+            "content_words": 120,
+            "priority": 2,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_3c592bea",
+            "section_type": "hashtag",
+            "content": "",
+            "content_words": 25,
+            "priority": 3,
+            "is_optional": false
+          },
+          {
+            "section_id": "sec_e683718b",
+            "section_type": "cta",
+            "content": "",
+            "content_words": 20,
+            "priority": 2,
+            "is_optional": false
+          }
+        ],
+        "image_plan": {
+          "style": "高清摄影实拍风格，自然光线，生活化真实场景，突出产品使用细节与价格信息的清晰呈现",
+          "elements": [
+            "真实用户在日常场景中使用产品的画面（如厨房、办公桌、通勤途中）",
+            "叠加式价格对比图（原价划线+促销价高亮，可置于画面角落或悬浮层）",
+            "产品特写与使用动作结合（如手持、操作界面）"
+          ],
+          "count": 4,
+          "aspect_ratio": "4:3",
+          "color_scheme": "中性偏暖色调（米白、浅灰为主），价格信息用对比色（如深红/橙黄）突出",
+          "reference_image_ids": []
+        },
+        "video_plan": {
+          "duration": 30,
+          "scenes": [
+            {
+              "scene_id": "场景1",
+              "description": "一位年轻人在家中阳台用手机拍摄一盆绿植，展示植物生长状态，随后拿出手机打开购物App对比不同品牌同款植物的价格",
+              "duration": 15,
+              "visual_prompt": "卡通风格手绘动画：阳光明媚的阳台，绿植生机勃勃；主角手持手机，屏幕分屏显示三款植物商品页及价格标签（¥19.9、¥29.9、¥45），箭头标注‘同品种’‘同规格’"
+            },
+            {
+              "scene_id": "场景2",
+              "description": "主角将低价植物带回家种植，快速剪辑展示浇水、晒太阳、一周后长出新叶的过程，最后与高价植物并排对比，生长状态相似",
+              "duration": 10,
+              "visual_prompt": "动态插画：时间流逝效果（时钟旋转+日历翻页），植物从枯黄到茂盛的渐变过程；结尾双盆植物并列，标尺显示高度一致，打勾图标浮现"
+            },
+            {
+              "scene_id": "场景3",
+              "description": "主角对着镜头微笑竖起大拇指，背景弹出‘省心又省钱’标语和价格对比总结图",
+              "duration": 5,
+              "visual_prompt": "明亮简洁插画风：主角居中，身后悬浮半透明价格对比图（左侧¥19.9→✅健康生长；右侧¥45→✅健康生长；中间箭头→‘差价¥25.1，效果一样！’）"
+            }
+          ],
+          "voiceover": "还在花大价钱买贵价绿植？看这里！真实阳台场景实测——同品种植物，¥19.9和¥45的，养一周，长势居然一模一样！省下的钱，够买两杯奶茶啦～",
+          "voice_type": "年轻活力女声",
+          "style": "活泼轻快，带节奏感音效"
+        },
+        "audio_plan": {
+          "tts_text": "今天给大家分享真实使用场景, 价格对比图，活泼风格介绍",
+          "voice": "alloy",
+          "speed": 1.0,
+          "bgm_style": "轻快 upbeat 的流行电子或吉他小调"
+        },
+        "estimated_duration": 80,
+        "version": 1,
+        "metadata": {}
+      },
+      "items_snapshot": [],
+      "change_summary": "初始版本",
+      "created_by": "orchestrator",
+      "created_at": "2026-05-06T21:48:32.728926",
+      "metadata": {}
+    }
+  ],
+  "metadata": {},
+  "messages": [
+    {
+      "message_id": "ee7886ab-19a8-4c5c-96b6-ed59ba6ba97e",
+      "role": "assistant",
+      "content": "这是为你生成的内容方案，请确认：",
+      "timestamp": "2026-05-06T21:48:32.727927",
+      "metadata": {
+        "message_type": "plan",
+        "intent_type": "plan_confirmation",
+        "plan_data": {
+          "plan_id": "6f36ef89-69f6-485f-84ac-1aa261a7516c",
+          "brief_id": "ec00482a-2c10-4cfe-b136-a3697b4013e5",
+          "title": "宿舍党狂喜！9.9元种出ins风绿植，连宿管阿姨都夸我有生活感✨",
+          "text_sections": [
+            {
+              "section_id": "sec_e92a0d79",
+              "section_type": "headline",
+              "content": "",
+              "content_words": 12,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_5c24a246",
+              "section_type": "text",
+              "content": "",
+              "content_words": 180,
+              "priority": 1,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_a372f3d0",
+              "section_type": "text",
+              "content": "",
+              "content_words": 120,
+              "priority": 2,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_3c592bea",
+              "section_type": "hashtag",
+              "content": "",
+              "content_words": 25,
+              "priority": 3,
+              "is_optional": false
+            },
+            {
+              "section_id": "sec_e683718b",
+              "section_type": "cta",
+              "content": "",
+              "content_words": 20,
+              "priority": 2,
+              "is_optional": false
+            }
+          ],
+          "image_plan": {
+            "style": "高清摄影实拍风格，自然光线，生活化真实场景，突出产品使用细节与价格信息的清晰呈现",
+            "elements": [
+              "真实用户在日常场景中使用产品的画面（如厨房、办公桌、通勤途中）",
+              "叠加式价格对比图（原价划线+促销价高亮，可置于画面角落或悬浮层）",
+              "产品特写与使用动作结合（如手持、操作界面）"
+            ],
+            "count": 4,
+            "aspect_ratio": "4:3",
+            "color_scheme": "中性偏暖色调（米白、浅灰为主），价格信息用对比色（如深红/橙黄）突出",
+            "reference_image_ids": []
+          },
+          "video_plan": {
+            "duration": 30,
+            "scenes": [
+              {
+                "scene_id": "场景1",
+                "description": "一位年轻人在家中阳台用手机拍摄一盆绿植，展示植物生长状态，随后拿出手机打开购物App对比不同品牌同款植物的价格",
+                "duration": 15,
+                "visual_prompt": "卡通风格手绘动画：阳光明媚的阳台，绿植生机勃勃；主角手持手机，屏幕分屏显示三款植物商品页及价格标签（¥19.9、¥29.9、¥45），箭头标注‘同品种’‘同规格’"
+              },
+              {
+                "scene_id": "场景2",
+                "description": "主角将低价植物带回家种植，快速剪辑展示浇水、晒太阳、一周后长出新叶的过程，最后与高价植物并排对比，生长状态相似",
+                "duration": 10,
+                "visual_prompt": "动态插画：时间流逝效果（时钟旋转+日历翻页），植物从枯黄到茂盛的渐变过程；结尾双盆植物并列，标尺显示高度一致，打勾图标浮现"
+              },
+              {
+                "scene_id": "场景3",
+                "description": "主角对着镜头微笑竖起大拇指，背景弹出‘省心又省钱’标语和价格对比总结图",
+                "duration": 5,
+                "visual_prompt": "明亮简洁插画风：主角居中，身后悬浮半透明价格对比图（左侧¥19.9→✅健康生长；右侧¥45→✅健康生长；中间箭头→‘差价¥25.1，效果一样！’）"
+              }
+            ],
+            "voiceover": "还在花大价钱买贵价绿植？看这里！真实阳台场景实测——同品种植物，¥19.9和¥45的，养一周，长势居然一模一样！省下的钱，够买两杯奶茶啦～",
+            "voice_type": "年轻活力女声",
+            "style": "活泼轻快，带节奏感音效"
+          },
+          "audio_plan": {
+            "tts_text": "今天给大家分享真实使用场景, 价格对比图，活泼风格介绍",
+            "voice": "alloy",
+            "speed": 1.0,
+            "bgm_style": "轻快 upbeat 的流行电子或吉他小调"
+          },
+          "estimated_duration": 80,
+          "version": 1,
+          "metadata": {}
+        }
+      }
+    }
+  ]
+}

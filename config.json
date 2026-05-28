@@ -1,0 +1,481 @@
+{
+  "$schema": "./schema.json",
+  "$comment": "======================================== Redbook 统一配置文件 ========================================\n各配置项说明：\n- environments: 多环境配置管理\n- models: AI 模型配置（llm, vision, image_generation, tts, video）",
+  "$version": "1.0.0",
+  "$comment_metadata": "---------------------------------------- 【元数据】- 配置文件版本和说明 ----------------------------------------",
+  "$comment_environments": "---------------------------------------- 【环境配置】- 多环境配置 ----------------------------------------",
+  "$comment_models": "---------------------------------------- 【模型配置】- AI 模型配置 ----------------------------------------",
+  "environments": {
+    "development": {
+      "$comment": "---------------------------------------- 【开发环境】----------------------------------------",
+      "models": {
+        "llm": {
+          "primary": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+            "model_name": "qwen3.6-plus-2026-04-02",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+            "model_name": "qwen3.6-35b-a3b",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "vision": {
+          "primary": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+            "model_name": "wan2.7-image-pro",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+            "model_name": "wan2.7-image",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "image_generation": {
+          "primary": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+            "model_name": "qwen-image-2.0-pro-2026-04-22",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+            "model_name": "qwen-image-2.0-pro",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "tts": {
+          "primary": {
+            "provider": "minimax",
+            "api_url": "https://api.minimaxi.com/v1/t2a_v2",
+            "model_name": "speech-2.8-hd",
+            "api_key": "sk-cp-QI5hMZC8BwNBiY4TmAuKixuv8Qz_r2HIb9iDOPiHyi7FkWCn0WUtzQ363qOonMJWi3NrbHYx6EpAYWu-JcDOxu6JLjd-ZVF02ZaTBWDsVexFqCS5T_dB6zw",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "minimax",
+            "api_url": "https://api.minimaxi.com/v1/t2a_v2",
+            "model_name": "speech-2.8-turbo",
+            "api_key": "sk-cp-QI5hMZC8BwNBiY4TmAuKixuv8Qz_r2HIb9iDOPiHyi7FkWCn0WUtzQ363qOonMJWi3NrbHYx6EpAYWu-JcDOxu6JLjd-ZVF02ZaTBWDsVexFqCS5T_dB6zw",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "video": {
+          "primary": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+            "status_url_template": "https://dashscope.aliyuncs.com/api/v1/tasks/{task_id}",
+            "model_name": "happyhorse-1.0-t2v",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": false
+          },
+          "video_t2v": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+            "status_url_template": "https://dashscope.aliyuncs.com/api/v1/tasks/{task_id}",
+            "model_name": "happyhorse-1.0-t2v",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": false
+          },
+          "video_i2v": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+            "status_url_template": "https://dashscope.aliyuncs.com/api/v1/tasks/{task_id}",
+            "model_name": "happyhorse-1.0-i2v",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": false
+          },
+          "video_r2v": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+            "status_url_template": "https://dashscope.aliyuncs.com/api/v1/tasks/{task_id}",
+            "model_name": "happyhorse-1.0-r2v",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": false
+          },
+          "video_edit": {
+            "provider": "dashscope",
+            "api_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+            "status_url_template": "https://dashscope.aliyuncs.com/api/v1/tasks/{task_id}",
+            "model_name": "happyhorse-1.0-video-edit",
+            "api_key": "sk-b8254f4363744ca3a265a27da530df66",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": false
+          },
+          "fallback": {
+            "provider": "minimax",
+            "api_url": "https://api.minimaxi.com/v1/video_generation",
+            "status_url_template": "https://api.minimaxi.com/v1/video_generation/{task_id}",
+            "model_name": "MiniMax-Hailuo-2.3",
+            "api_key": "sk-cp-QI5hMZC8BwNBiY4TmAuKixuv8Qz_r2HIb9iDOPiHyi7FkWCn0WUtzQ363qOonMJWi3NrbHYx6EpAYWu-JcDOxu6JLjd-ZVF02ZaTBWDsVexFqCS5T_dB6zw",
+            "default_params": {},
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": false
+          }
+        }
+      },
+      "$comment_oss": "---------------------------------------- 【OSS 配置】- 阿里云对象存储 ----------------------------------------",
+      "oss": {
+        "access_key_id": "YOUR_ALIYUN_ACCESS_KEY_ID",
+        "access_key_secret": "YOUR_ALIYUN_ACCESS_KEY_SECRET",
+        "bucket": "redbook-materials",
+        "endpoint": "oss-cn-shenzhen.aliyuncs.com",
+        "region": "cn-shenzhen"
+      },
+      "$comment_context": "---------------------------------------- 【上下文管理配置】- 工作窗口上下文管理 ----------------------------------------",
+      "context_management": {
+        "max_messages": 50,
+        "sliding_window_mode": "hybrid",
+        "summary_trigger_ratio": 0.8,
+        "archive_enabled": true
+      }
+    },
+    "staging": {
+      "$comment": "---------------------------------------- 【预发布环境】----------------------------------------",
+      "models": {
+        "llm": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "gpt-4o",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4096,
+              "top_p": 1.0
+            },
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4096
+            },
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "vision": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "gpt-4o",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4096
+            },
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4096
+            },
+            "timeout": 120,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "image_generation": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "dall-e-3",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "size": "1024x1024",
+              "quality": "standard",
+              "n": 1
+            },
+            "timeout": 180,
+            "retry_count": 2,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "size": "1024x1024",
+              "quality": "standard"
+            },
+            "timeout": 180,
+            "retry_count": 2,
+            "enabled": true
+          }
+        },
+        "tts": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "tts-1",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "voice": "alloy",
+              "speed": 1.0
+            },
+            "timeout": 60,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "voice": "alloy",
+              "speed": 1.0
+            },
+            "timeout": 60,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "video": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "sora",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "duration": 10,
+              "quality": "medium"
+            },
+            "timeout": 300,
+            "retry_count": 2,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "duration": 10,
+              "quality": "medium"
+            },
+            "timeout": 300,
+            "retry_count": 2,
+            "enabled": true
+          }
+        }
+      }
+    },
+    "production": {
+      "$comment": "---------------------------------------- 【生产环境】----------------------------------------",
+      "models": {
+        "llm": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "gpt-4o",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.5,
+              "max_tokens": 4096,
+              "top_p": 1.0
+            },
+            "timeout": 120,
+            "retry_count": 5,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.5,
+              "max_tokens": 4096
+            },
+            "timeout": 120,
+            "retry_count": 5,
+            "enabled": true
+          }
+        },
+        "vision": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "gpt-4o",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.5,
+              "max_tokens": 4096
+            },
+            "timeout": 120,
+            "retry_count": 5,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "temperature": 0.5,
+              "max_tokens": 4096
+            },
+            "timeout": 120,
+            "retry_count": 5,
+            "enabled": true
+          }
+        },
+        "image_generation": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "dall-e-3",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "size": "1024x1024",
+              "quality": "hd",
+              "n": 1
+            },
+            "timeout": 180,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "size": "1024x1024",
+              "quality": "hd"
+            },
+            "timeout": 180,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "tts": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "tts-1",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "voice": "alloy",
+              "speed": 1.0
+            },
+            "timeout": 60,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "voice": "alloy",
+              "speed": 1.0
+            },
+            "timeout": 60,
+            "retry_count": 3,
+            "enabled": true
+          }
+        },
+        "video": {
+          "primary": {
+            "provider": "openai",
+            "api_url": "https://api.openai.com/v1",
+            "model_name": "sora",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "duration": 20,
+              "quality": "high"
+            },
+            "timeout": 600,
+            "retry_count": 3,
+            "enabled": true
+          },
+          "fallback": {
+            "provider": "anthropic",
+            "api_url": "https://api.anthropic.com/v1",
+            "model_name": "claude-sonnet-4-20250514",
+            "api_key": "your_api_key_here",
+            "default_params": {
+              "duration": 20,
+              "quality": "high"
+            },
+            "timeout": 600,
+            "retry_count": 3,
+            "enabled": true
+          }
+        }
+      }
+    }
+  },
+  "activeEnvironment": "development"
+}
