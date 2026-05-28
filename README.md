@@ -33,11 +33,28 @@ project:
 
 ## 项目概述
 
-Redbook 是一个 AI 小红书文案生成工作流系统，包含：
-- **AI 模型配置管理** - 多环境配置和多种 AI 模型统一调用
-- **内容生成 Agent** - 自动生成小红书文案、配图、视频、语音
-- **迭代优化** - 用户反馈驱动多轮迭代修改
-- **版本管理** - 内容持久化和版本回滚
+Redbook 是一个 AI 小红书**创意工坊（Studio）**系统，通过 AI Agent 技术帮助用户自动生成小红书文案、配图、视频、语音等多媒体内容。
+
+### 核心模块
+
+| 模块 | 说明 |
+|------|------|
+| **Studio 创意工坊** | AI 对话式内容创作，支持多轮迭代优化、版本管理、Canvas 画布 |
+| **Agent** | 智能 Agent 系统，包含 BriefParser、Planner、Critic、Iterator |
+| **Skills** | 技能系统，支持 Text、Image、Video、Audio 等多模态内容生成 |
+| **Memory** | 记忆模块，支持短期/长期记忆，向量检索 |
+| **Canvas** | 可视化画布，支持拖拽、框选、快照、AI 辅助编辑 |
+
+### 创意工坊核心能力
+
+| 能力 | 说明 |
+|------|------|
+| **AI 对话式创作** | 自然语言描述需求，AI 自动解析并生成内容方案 |
+| **多模态生成** | 同时生成文案、图片、视频、语音 |
+| **迭代优化** | 用户反馈驱动多轮修改，直到满意 |
+| **版本管理** | 内容持久化，支持版本回滚 |
+| **Canvas 画布** | 可视化编辑和调整内容元素 |
+| **智能审核** | 自动检测敏感词和内容质量 |
 
 ---
 
@@ -923,6 +940,91 @@ CREATED → PLANNING → CONFIRMED → GENERATING → REVIEWING
 
 ---
 
+## 创意工坊 Studio 详细介绍
+
+> 详细文档请参阅 [STUDIO.md](./STUDIO.md)
+
+### 核心概念
+
+#### Session（创作会话）
+
+一次完整的创作过程，包含：
+
+- **Brief** - AI 解析后的结构化需求
+- **ContentPlan** - 内容生成方案
+- **ContentItem[]** - 生成的内容项
+- **Version[]** - 版本历史
+- **Message[]** - 对话消息历史
+
+#### Brief（需求解析）
+
+```python
+@dataclass
+class Brief:
+    goal: ContentGoal           # 种草/测评/教程/生活分享/产品展示
+    style: str                # 活泼/专业/治愈等
+    keywords: List[str]        # 关键词/卖点
+    must_include: List[str]    # 必须包含的元素
+    image_style: str          # 配图风格（摄影实拍/插画/3D）
+    need_text: bool          # 是否需要文案
+    need_images: bool         # 是否需要配图
+    need_video: bool          # 是否需要视频
+    need_voiceover: bool     # 是否需要配音
+    target_audience: str     # 目标受众
+```
+
+### 技能系统（Skills）
+
+| 技能 | 调用模型 | 功能 |
+|------|---------|------|
+| `TextSkill` | LLM | 生成小红书风格文案 |
+| `ImageSkill` | Image Generation | 生成配图 |
+| `VideoSkill` | Video Generation | 生成视频 |
+| `AudioSkill` | TTS | 生成语音配音 |
+| `AnalyticSkill` | Vision | 分析素材图片 |
+
+### Canvas 画布功能
+
+**功能**：
+- 拖拽文件（图片/视频）到画布
+- 框选内容元素
+- 元素对齐和分布
+- 画布快照和回溯
+- AI 辅助编辑建议
+
+**操作类型**：
+- `ADD_ELEMENT` - 添加元素
+- `MOVE_ELEMENT` - 移动元素
+- `RESIZE_ELEMENT` - 调整大小
+- `DELETE_ELEMENT` - 删除元素
+- `STYLE_CHANGE` - 样式修改
+- `UNDO` / `REDO` - 撤销/重做
+
+### 数据存储
+
+```
+data/studio/
+├── sessions/{session_id}/
+│   ├── versions/v1/items.json  # 版本快照
+│   └── current/images/        # 当前版本文件
+├── canvases/
+│   └── {canvas_id}.json       # 画布数据
+└── materials/                  # 素材文件
+```
+
+### 快速使用
+
+```bash
+# 1. 启动服务
+python start_all.py
+
+# 2. 访问 http://localhost:3000
+
+# 3. 创建会话 → 输入需求 → 确认方案 → 生成内容 → 迭代优化 → 发布
+```
+
+---
+
 ## 更新日志
 
 <!--
@@ -930,6 +1032,7 @@ CREATED → PLANNING → CONFIRMED → GENERATING → REVIEWING
 - [YYYY-MM-DD] [Phase X]: [描述]
 -->
 
+- [2026-05-28] 添加 Studio 创意工坊详细介绍文档和 README 更新
 - [2026-04-28] Phase 5: 添加按需生成机制（need_text/need_images）和无素材后备机制
 - [2026-04-27] Phase 6: 完成内容持久化与版本回滚功能
 - [2026-04-27] Phase 5: 完成并行生成、图文冲突检测、方案确认流程
